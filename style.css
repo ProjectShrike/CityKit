@@ -3,35 +3,71 @@
 * {
 	margin: 0em;
 	padding: 0em;
-	font-size: 100%;
+}
+
+@font-face {
+	font-family: Gotham;
+	src: url("fonts/gotham-rounded-medium.otf");
 }
 
 .blur {
 	position: absolute;
-	top: 0em;
-	left: 0em;
+	top: 0px;
+	left: 0px;
 	width: 100%;
 	height: 100%;
 	background: rgba(255, 255, 255, 0.25);
 	z-index: -1;
 }
 
-#header {
+#bgwrapper {
 	position: absolute;
 	top: 0px;
 	left: 0px;
 	width: 100%;
-	height: 5em;
-	background: #333;
-	font-family: 2em;
-}
-
-#bgwrapper {
-	position: absolute;
-	top: 5em;
-	left: 0px;
-	width: 100%;
-	height: 35em;
+	height: 100%;
 	background: url("images/mainbg.jpg") no-repeat center bottom fixed;
 	background-size: cover;
+}
+
+# {
+	background-color: rgba(255,255,255,1);
+}
+
+#title {
+	position: absolute;
+	top: 200px;
+	left: calc(50% - 200px);
+	width: 400px;
+	height: 120px;
+	text-align: center;
+	line-height: 120px;
+	font-family: Gotham;
+	font-size: 120px;
+	color: #FFF;
+}
+
+#search-box {
+	position: absolute;
+	top: 450px;
+	left: calc(50% - 250px);
+	width: 500px;
+	height: 20px;
+}
+
+#main-search {
+	position: absolute;
+	top: 450px;
+	left: calc(50% - 250px);
+	background: #FFF;
+	width: 470px;
+	height: 20px;
+	border: none;
+	padding: 15px;
+	font-family: Gotham;
+	font-size: 20px;
+}
+
+#main-search:focus {
+	outline: none;
 }
