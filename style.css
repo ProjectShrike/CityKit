@@ -67,8 +67,8 @@
 	width: 0px;
 	height: 20px;
 	border: none;
-	padding-top: 20px;
-	padding-bottom: 20px;
+	padding-top: 20px!important;
+	padding-bottom: 20px!important;
 	font-family: Gotham;
 	font-size: 20px;
 }
@@ -82,7 +82,7 @@
   display: inline-block;
   background: rgba(0,0,0,0);
   color: #FFF;
-  padding: 15px;
+  padding: 20px;
   width: 130px;
   min-width: 130px;
   height: 40px;
@@ -99,9 +99,4 @@
   background: #FFF;
   color: #000;
   text-shadow: none;
-}
-
-#map-canvas {
-	width: 1000px;
-	height: 1000px;
 }
