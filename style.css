@@ -75,3 +75,27 @@
 #main-search:focus {
 	outline: none;
 }
+
+#rounded-rect-btn {
+  font-family: Gotham;
+  display: inline-block;
+  background: rgba(0,0,0,0);
+  color: #FFF;
+  padding: 15px;
+  width: 130px;
+  min-width: 130px;
+  height: 40px;
+  min-height: 40px;
+  border-radius: 3px;
+  border: solid 1px #FFF;
+  text-align: center;
+  line-height: 13px;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+}
+
+#rounded-rect-btn:hover {
+  background: #FFF;
+  color: #000;
+  text-shadow: none;
+}
