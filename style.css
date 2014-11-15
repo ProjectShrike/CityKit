@@ -58,12 +58,13 @@
 #main-search {
 	position: absolute;
 	top: 450px;
-	left: calc(50% - 250px);
+	left: 50%;
 	background: #FFF;
-	width: 470px;
+	width: 0px;
 	height: 20px;
 	border: none;
-	padding: 15px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 	font-family: Gotham;
 	font-size: 20px;
 }
