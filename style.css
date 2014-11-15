@@ -100,3 +100,8 @@
   color: #000;
   text-shadow: none;
 }
+
+#map-canvas {
+	width: 1000px;
+	height: 1000px;
+}
