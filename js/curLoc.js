@@ -8,7 +8,7 @@
 // is probably because you have denied permission for location sharing.
 var geocoder = new google.maps.Geocoder();
 var map;
-var tags; //stores the tags to be displayed on screen
+var tags = new Array(5); //stores the tags to be displayed on screen
 var time = 24; //24 hours from now (for events happening nearby)
 var radius = 2; //default radius for PoV around the map in km
 var zoomVal = 13;
@@ -221,18 +221,21 @@ function initialize() {
         handleNoGeolocation(false);
     }
 
-    var xmlhttp = new XMLHttpRequest();
-    var url = 'http://citykit.ca/promotions';
-    var stringData = '';
-    xmlhttp.onreadystatechange = function(){
-        if(xmlhttp.readyState == 4){
-            handlePromos(JSON.parse(xmlhttp.responseText).array);
-            //console.log(JSON.parse(xmlhttp.responseText));
-        }
+    //dummy code to test parsing and displaying markers on the map
+    if (tags[3] == true || tags[4] == true) {
+        var xmlhttp = new XMLHttpRequest();
+        var url = 'http://citykit.ca/promotions';
+        var stringData = '';
+        xmlhttp.onreadystatechange = function () {
+            if (xmlhttp.readyState == 4) {
+                handlePromos(JSON.parse(xmlhttp.responseText).array);
+                //console.log(JSON.parse(xmlhttp.responseText));
+            }
 
+        }
+        xmlhttp.open('GET', url, true);
+        xmlhttp.send();
     }
-    xmlhttp.open('GET', url, true);
-    xmlhttp.send();
 }
 
 function handleNoGeolocation(errorFlag) {
