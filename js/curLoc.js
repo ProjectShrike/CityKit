@@ -81,7 +81,7 @@ function geoListener(promo, info, objects, i){
                 animation: google.maps.Animation.DROP
                 //icon = objects.image
             });
-
+            console.log(promo[i]);
             var url = '';
             var phone = '';
 
@@ -111,6 +111,7 @@ function geoListener(promo, info, objects, i){
                 content: desc,
                 maxWidth: 300
             });
+            console.log(info[i]);
 
             //adds each of the markers to the screen
             google.maps.event.addListener(promo[i], 'click', function() {
