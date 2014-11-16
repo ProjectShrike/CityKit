@@ -6,12 +6,13 @@ City Kit
 ###Contributors
 ####Developers
 
-Web:
+<strong>Web:</strong>
 * Wojtek Swiderski
 * Sadman Kazi
 * Sahibjot Saggu
 * Angad Kashyap
-App:
+
+<strong>App:</strong>
 * Priyesh Patel
 * Umesh Khanna
 
