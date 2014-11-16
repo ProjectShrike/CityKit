@@ -72,7 +72,7 @@ function handlePromos (objects) {
                 promo[i] = new google.maps.Marker({
                     map:map,
                     position: results[0].geometry.position,
-                    title: objects[i].name,
+                    title: objects[0].name,
                     animation: google.maps.Animation.DROP
                     //icon = objects.image
                 });
