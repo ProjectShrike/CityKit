@@ -86,7 +86,7 @@ function geoListener(promo, info, objects, i){
             var phone = '';
 
             if (objects[i].path != '')
-            url = '<a href ="' + objects[i].path+'" id="loc_link">Get Coupon</a>';
+            url = '<a target="_blank" href ="' + objects[i].path+'" id="loc_link">Get Coupon</a>';
             if (objects[i].phone != '')
             phone = '<b>Phone: </b>'+objects[i].phone;
 
