@@ -184,7 +184,7 @@ function eventGeoListener(eventMarker, info, objects, i){
             //onsole.log(info[i]);
 
             //adds each of the markers to the screen
-            google.maps.event.addListener(promo[i], 'click', function() {
+            google.maps.event.addListener(eventMarker[i], 'click', function() {
                 info[i].open(map,eventMarker[i]);
             });
         } else {
