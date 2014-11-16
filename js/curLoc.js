@@ -79,10 +79,10 @@ function handlePromos (objects) {
                 var url = '';
                 var phone = '';
 
-                if (objects[i].url != '')
+                if (objects[i].path != '')
                     url = '<b>Website: </b><a href ="'+
-                    objects[i].url+'">'
-                    +objects[i].url+'</a>';
+                    objects[i].path+'">'
+                    +objects[i].path+'</a>';
                 if (objects[i].phone != '')
                     phone = '<b>Phone: </b>'+objects[i].phone;
 
