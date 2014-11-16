@@ -67,12 +67,12 @@ function handlePromos (objects) {
     var promo = new Array (objects.length);
     var info = new Array (objects.length);
     for (var i = 0; i < objects.length; i++) {
-        geoListener(objects, i);
+        geoListener(promo, info, objects, i);
 
     }
 }
 
-function geoListener(objects, i){
+function geoListener(promo, info, objects, i){
     geocoder.geocode( { 'address': objects[i].location}, function(results, status) {
         if (status == google.maps.GeocoderStatus.OK) {
             promo[i] = new google.maps.Marker({
