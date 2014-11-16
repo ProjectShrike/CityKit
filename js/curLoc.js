@@ -39,7 +39,7 @@ function setAllMap(map) {
                 xmlhttp.send();
             }
         //for events
-            if (tags[0] == true || tags[1] == true || tags[2] == true) {
+         /*   if (tags[0] == true || tags[1] == true || tags[2] == true) {
                 //send in the time
 
                 var xmlhttp = new XMLHttpRequest();
@@ -54,7 +54,7 @@ function setAllMap(map) {
                 }
                 xmlhttp.open('GET', url, true);
                 xmlhttp.send();
-        }
+        }*/
     }
 
     //event listeners for button toggles
