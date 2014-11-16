@@ -34,7 +34,7 @@ function initialize() {
                 content: 'You are currently here!'
             });*/
 
-            map.setCenter(map);
+            map.setCenter(currentPosition);
         }, function() {
             handleNoGeolocation(true);
         });
