@@ -7,6 +7,7 @@
     var time = 24; //24 hours from now (for events happening nearby)
     var radius = 2; //default radius for PoV around the map in km
     var zoomVal = 13;
+    var curLocation;
 
     //gets called after each call event
     function toggleListener () {
@@ -14,7 +15,7 @@
         setAllMap (null);
         var marker = new google.maps.Marker({
             map:map,
-            position: pos,
+            position: curLocation,
             animation: google.maps.Animation.BOUNCE
         });
         //if either food or stores are selected
@@ -275,16 +276,11 @@ function initialize() {
     if(navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
 
-            var pos = new google.maps.LatLng(position.coords.latitude,
+            curLocation = new google.maps.LatLng(position.coords.latitude,
                 position.coords.longitude);
-            /*
-            var infowindow = new google.maps.InfoWindow({
-                map: map,
-                position: pos,
-                content: 'Location found using HTML5.'
-            });*/
 
-            map.setCenter(pos);
+
+            map.setCenter(currentLocation);
         }, function() {
             handleNoGeolocation(true);
         });
