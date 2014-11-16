@@ -166,7 +166,7 @@ function initialize() {
     var stringData = '';
     xmlhttp.onreadystatechange = function(){
         if(xmlhttp.readyState == 4){
-            //handlePromos(JSON.parse(xmlhttp.responseText).array);
+            handlePromos(JSON.parse(xmlhttp.responseText).array);
             console.log(JSON.parse(xmlhttp.responseText).array);
             //console.log(JSON.parse(xmlhttp.responseText));
         }
