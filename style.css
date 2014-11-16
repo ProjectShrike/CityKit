@@ -134,20 +134,17 @@ body {
 	position: absolute;
 	top: 47.5%;
 	left: calc(50% - 150px);
-	width: 300px;
+	width: 310px;
 	height: auto;
-	background: #222;
+	background: transparent;
 	display: none;
-	padding: 10px;
-	padding-bottom: 20px;
-	border-radius: 2px;
 	box-shadow: 0px 0px 10px #000;
 }
 
 #settings p {
 	margin: 5px;
 	font-family: Gotham;
-	color: #FFF;
+	color: #000;
 }
 
 #settings #settings_text {
@@ -156,32 +153,27 @@ body {
 
 #settings #settings_text li {
 	display: block;
-	width: 280px;
+	width: 300px;
 	height: 30px;
-	/*background: #CCC;*/
-	margin-top: 8px;
-	margin-left: 5px;
+	background: #FFF;
+	text-align: center;
 	line-height: 30px;
 	font-family: Gotham;
-	padding: 5px;
-	border-radius: 3px;
-	text-indent: 50px;
 	cursor: pointer;
+	padding: 5px;
+	color: #000;
+	-webkit-transition: background 0.2s;
+}
+
+#settings #settings_text li:hover {
+	background: #CCC;
+}
+
+#settings #settings_text #update {
+	background: #4f94dd;
 	color: #FFF;
 }
 
-#settings #settings_selectors {
-	position: absolute;
-	top: 22px;
-	left: 0px;
-	list-style-type: none;
-}
-
-#settings #settings_selectors li {
-	width: 20px;
-	height: 20px;
-	background: #4f94dd;
-	margin-left: 30px;
-	margin-top: 28px;
-	border-radius: 50%;
+#settings #settings_text #update:hover {
+	background: #3987db;
 }
