@@ -47,7 +47,7 @@ function setAllMap(map) {
                 var exmlhttp = new XMLHttpRequest();
                 var url = 'http://citykit.ca/events/'+time;
                 var stringData = '';
-                xmlhttp.onreadystatechange = function () {
+                exmlhttp.onreadystatechange = function () {
                     if (exmlhttp.readyState == 4) {
                         //console.log(JSON.parse(xmlhttp.responseText));
                         handleEvents(JSON.parse(exmlhttp.responseText).array);
