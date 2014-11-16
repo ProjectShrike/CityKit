@@ -21,7 +21,9 @@ $(document).ready(function() {
 		$("#map_load").delay(2000).animate({
 			'height' : '0px'
 		}).fadeOut();
-		$("#map-canvas").delay(1200).fadeIn();
+		$("#map-canvas").delay(1200).animate({
+			'left' : '10%'
+		});
 	});
 
 	$(window).resize(function() {
