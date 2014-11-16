@@ -158,9 +158,8 @@ function initialize() {
     var xmlhttp = new XMLHttpRequest();
     var url = 'http://citykit.ca/promotions';
     xmlhttp.onreadystatechange = function(){
-        var results = JSON.parse(xmlhttp.responseText);
+        console.log(JSON.parse(xmlhttp.responseText));
         //handlePromos(results);
-        console.log(result);
     }
     xmlhttp.open('GET', url, true);
     xmlhttp.send();
