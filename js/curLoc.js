@@ -66,8 +66,8 @@ function handlePromos (objects) {
     console.log(objects[2].name);
     var promo = new Array (objects.length);
     var info = new Array (objects.length);
-    var i = 0;
-    while (i < objects.length) {
+    var penis = 0;
+    while (penis < objects.length) {
         var geocoder = new google.maps.Geocoder();
         geocoder.geocode( { 'address': objects[i].location}, function(results, status) {
             if (status == google.maps.GeocoderStatus.OK) {
@@ -117,7 +117,7 @@ function handlePromos (objects) {
                 alert('Geocode was not successful for the following reason: ' + status);
             }
         });
-        i++;
+        penis++;
     }
 }
 
