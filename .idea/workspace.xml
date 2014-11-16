@@ -32,7 +32,7 @@
         <entry file="file://$PROJECT_DIR$/js/curLoc.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.4678261" vertical-offset="1040" max-vertical-offset="3553">
-              <caret line="79" column="57" selection-start-line="79" selection-start-column="57" selection-end-line="79" selection-end-column="57" />
+              <caret line="79" column="54" selection-start-line="79" selection-start-column="54" selection-end-line="79" selection-end-column="54" />
               <folding>
                 <element signature="e#0#43#0" expanded="false" />
               </folding>
@@ -495,7 +495,7 @@
       <workItem from="1416088507424" duration="519000" />
       <workItem from="1416089037108" duration="5914000" />
       <workItem from="1416112626260" duration="1131000" />
-      <workItem from="1416113762941" duration="16989000" />
+      <workItem from="1416113762941" duration="17225000" />
     </task>
     <task id="LOCAL-00001" summary="Added the current position on the map script">
       <created>1416089048611</created>
@@ -815,11 +815,17 @@
       <option name="project" value="LOCAL" />
       <updated>1416132319464</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="For loops suck in js">
+      <created>1416132478263</created>
+      <option name="number" value="00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1416132478263</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24599000" />
+    <option name="totallyTimeSpent" value="24835000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -978,7 +984,7 @@
     <entry file="file://$PROJECT_DIR$/js/curLoc.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4678261" vertical-offset="1040" max-vertical-offset="3553">
-          <caret line="79" column="57" selection-start-line="79" selection-start-column="57" selection-end-line="79" selection-end-column="57" />
+          <caret line="79" column="54" selection-start-line="79" selection-start-column="54" selection-end-line="79" selection-end-column="54" />
           <folding>
             <element signature="e#0#43#0" expanded="false" />
           </folding>
