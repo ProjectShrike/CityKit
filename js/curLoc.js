@@ -48,7 +48,7 @@ function setAllMap(map) {
                 xmlhttp.onreadystatechange = function () {
                     if (xmlhttp.readyState == 4) {
                         handleEvents(JSON.parse(xmlhttp.responseText).array);
-                        //console.log(JSON.parse(xmlhttp.responseText));
+                        console.log(JSON.parse(xmlhttp.responseText));
                     }
 
                 }
@@ -135,6 +135,7 @@ function handleEvents (objects) {
     var eventMarker = new Array (objects.length);
     var info = new Array (objects.length);
     for (var i = 0; i < objects.length; i++) {
+        console.log(object[i]);
         eventGeoListener(eventMarker, info, objects, i);
     }
 }
