@@ -5,11 +5,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>CityKit</title>
 
-		<!-- Bootstrap Core CSS // Priyesh can do the bootstrap part -->
-		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-		<!-- Google map api -->
-		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-
 		<!-- Custom CSS -->
 		<link rel="stylesheet" type="text/css" href="style.css" />
 
@@ -18,15 +13,89 @@
 	</head>
 	<body>
 		<div id="bgwrapper">
-			<div class="row">
-				<div id="title">citykit</div>
-			</div>
-			<input type="text" id="main-search" placeholder="what would you like to do today..." />
-			<!--<a href="#" id="rounded-rect-btn" style="text-decoration: none;">Button</a>-->
+			<div id="title">citykit</div>
+			<div id="slogan"
+			<!-- <input type="text" id="main-search" placeholder="what would you like to do today..." />
+			<div id="main_options">
+				<ul>
+					<li id="butt1" onClick="near_me()">What's near me?</li>
+					<!--<li id="butt2">I know where I'm going</li>-->
+				</ul>
+			</div> <!-- end main_options div -->
 		</div>
+		<div id="map_load">
+			<div id="load_bar"></div>
+		</div>
+		<div id="map-canvas"></div>
+	<!--<iframe id="map-canvas" frameborder="0" src="https://www.google.com/maps/embed/v1/search?key=AIzaSyCoj4oT-3zbL-sW9B6Wb4k84xTGrFCcIFo&q=Kitchener&zoom=13">
+	</iframe>-->
 	</body>
 	<script type="text/javascript" src="jquery.js"></script>
 	<script type="text/javascript" src="script.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCoj4oT-3zbL-sW9B6Wb4k84xTGrFCcIFo"></script>
+	<script type="text/javascript">
+/**
+ * Created by Sadman on 2014-11-15.
+ */
 
 
+// Note: This example requires that you consent to location sharing when
+// prompted by your browser. If you see a blank space instead of the map, this
+// is probably because you have denied permission for location sharing.
+
+var map;
+//var radius = 2; //default radius for PoV around the map
+//var zoom =
+
+
+function initialize() {
+    var mapOptions = {
+        zoom: 16
+    };
+    map = new google.maps.Map(document.getElementById('map-canvas'),
+        mapOptions);
+
+    // Try HTML5 geolocation
+    if(navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = new google.maps.LatLng(position.coords.latitude,
+                position.coords.longitude);
+
+            var infowindow = new google.maps.InfoWindow({
+                map: map,
+                position: pos,
+                content: 'You are currently here!'
+            });
+
+            map.setCenter(pos);
+        }, function() {
+            handleNoGeolocation(true);
+        });
+    } else {
+        // Browser doesn't support Geolocation
+        handleNoGeolocation(false);
+    }
+}
+
+function handleNoGeolocation(errorFlag) {
+    if (errorFlag) {
+        var content = 'Error: The Geolocation service failed.';
+    } else {
+        var content = 'Error: Your browser doesn\'t support geolocation.';
+    }
+
+    var options = {
+        map: map,
+        position: new google.maps.LatLng(60, 105),
+        content: content
+    };
+
+    var infowindow = new google.maps.InfoWindow(options);
+    map.setCenter(options.position);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+
+	</script>
 </html>
