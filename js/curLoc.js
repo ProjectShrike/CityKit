@@ -11,10 +11,54 @@ var map;
 var radius = 2; //default radius for PoV around the map in km
 var zoomVal = 13;
 
-//gets an array of events in a specific radius and shows them on the map using markers
-function handleLandmarks (results) {
+//gets an array of events shows them on the map using markers
+function handleEvents (results) {
+    var eventMarker = new Array(results.length);
+    var info = new Array(results.length);
+    for (var i = 0; i < results.length; i++) {
+        //adds each of the markers to the screen
+        eventMarker[i] = new google.maps.Marker({
+            map: map,
+            position: results.position,
+            title: results.name,
+            animation: google.maps.Animation.DROP
+            //icon = results.image
+        });
+
+        var url = '';
+        var phone = '';
+
+        if (results[i].url != '')
+            url = '<b>Website: </b>' + results[i].url;
+        if (results[i].phone != '')
+            phone = '<b>Phone: </b>' + results[i].phone;
+        var desc = '<div id="content">' +
+            '<h1 id="firstHeading" class="firstHeading">results[i].name</h1>' +
+            '<div id="contact">' +
+            '<b>Website: </b>' +
+            results[i].url +
+            '<br>' +
+            phone +
+            '</div>' +
+            '<div id="bodyContent">' +
+            '<p>' +
+            results[i].message +
+            '</p>' +
+            '</div>' +
+            '</div>';
+
+        //adds the information provided by the business
+        info[i] = new google.maps.InfoWindow({
+            content: desc,
+            maxWidth: 300
+        });
+
+        google.maps.event.addListener(promo[i], 'click', function () {
+            info[i].open(map, eventMarker[i]);
+        });
 
 
+    }
 }
 
 //gets the data from subscribed businesses
@@ -26,14 +70,38 @@ function handlePromos (results) {
         promo[i] = new google.maps.Marker({
             map:map,
             position: results.position,
-            title: results.title,
+            title: results.name,
             animation: google.maps.Animation.DROP
             //icon = results.image
         });
 
+        var url = '';
+        var phone = '';
+
+        if (results[i].url != '')
+            url = '<b>Website: </b><a href ="'+
+            results[i].url+'">'
+            +results[i].url+'</a>';
+        if (results[i].phone != '')
+            phone = '<b>Phone: </b>'+results[i].phone;
+
+        var desc = '<div id="content">'+
+            '<h1 id="firstHeading" class="firstHeading">results[i].name</h1>'+
+            '<div id="contact">'+
+            url+
+            '<br>'+
+            phone+
+            '</div>'+
+            '<div id="bodyContent">'+
+            '<p>'+
+            results[i].description+
+            '</p>'+
+            '</div>'+
+            '</div>';
+
         //adds the information provided by the business
         info[i] = new google.maps.InfoWindow({
-            content: results.desc,
+            content: desc,
             maxWidth: 300
         });
 
@@ -86,6 +154,15 @@ function initialize() {
         // Browser doesn't support Geolocation
         handleNoGeolocation(false);
     }
+
+    var xmlhttp = new XMLHttpRequest();
+    var url = '/promotions';
+    xmlhttp.onreadystatechange = function(){
+        var results = JSON.parse(xmlhttp.responseText);
+        handlePromos(results);
+    }
+
+
 }
 
 function handleNoGeolocation(errorFlag) {
