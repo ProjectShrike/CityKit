@@ -30,6 +30,22 @@ $(document).ready(function() {
 	});
 
 	$("#sports").click(function() {
-
+		$("#sports").css("background", "#CCC");
 	});
+
+	$("#biking").click(function() {
+		$("#biking").css("background", "#CCC");
+	});
+
+	$("#pets").click(function() {
+		$("#pets").css("background", "#CCC");
+	});
+
+	$("#businesses").click(function() {
+		$("#businesses").css("background", "#CCC");
+	});
+
+	$("#events").click(function() {
+		$("#events").css("background", "#CCC");
+	});				
 });
