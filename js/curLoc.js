@@ -153,7 +153,7 @@ function eventGeoListener(eventMarker, info, objects, i){
             var image = {
                 url: 'images/MapMarkers/'+objects[i].category+'.png',
                 // This marker is 20 pixels wide by 32 pixels tall.
-                size: new google.maps.Size(33, 44),
+                size: new google.maps.Size(18, 24),
                 // The origin for this image is 0,0.
                 origin: new google.maps.Point(0,0),
                 // The anchor for this image is the base of the flagpole at 0,32.
@@ -219,7 +219,7 @@ function geoListener(promo, info, objects, i){
             var image = {
                 url: 'images/MapMarkers/'+objects[i].category+'.png',
                 // This marker is 20 pixels wide by 32 pixels tall.
-                size: new google.maps.Size(33, 44),
+                size: new google.maps.Size(18, 24),
                 // The origin for this image is 0,0.
                 origin: new google.maps.Point(0,0),
                 // The anchor for this image is the base of the flagpole at 0,32.
