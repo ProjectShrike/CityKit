@@ -160,9 +160,11 @@ function initialize() {
     var stringData = '';
     xmlhttp.onreadystatechange = function(){
         if(xmlhttp.readyState == 4){
-            console.log(JSON.parse(xmlhttp.responseText));
+            //handlePromos(JSON.parse(xmlhttp.responseText).array);
+            console.log(JSON.parse(xmlhttp.responseText).array);
+            //console.log(JSON.parse(xmlhttp.responseText));
         }
-        //handlePromos(results);
+
     }
 
     xmlhttp.open('GET', url, true);
