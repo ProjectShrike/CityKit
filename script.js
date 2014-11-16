@@ -16,7 +16,7 @@ $(document).ready(function() {
 
 	$("#butt1").click(function() {
 		$("#title").animate({
-			'top' : '5%'
+			'top' : '5%',
 		}, 1000);
 		$("#butt1").fadeOut("fast");
 		$("#map-canvas").delay(1200).animate({
@@ -25,6 +25,7 @@ $(document).ready(function() {
 		$("#settings_butt").animate({
 			'top' : '0px'
 		});
+		$("#slogan").fadeOut();
 	});
 
 	$("#settings_butt").click(function(){

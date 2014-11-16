@@ -60,24 +60,6 @@ body {
 	user-select: none;
 }
 
-#main-search {
-	position: absolute;
-	top: 450px;
-	left: 50%;
-	background: #FFF;
-	width: 0px;
-	height: 20px;
-	border: none;
-	padding-top: 20px;
-	padding-bottom: 20px;
-	font-family: Gotham;
-	font-size: 20px;
-}
-
-#main-search:focus {
-	outline: none;
-}
-
 #main_options {
 	position: absolute;
 	top: 45%;
@@ -147,8 +129,8 @@ body {
 
 #settings {
 	position: absolute;
-	top: 47.5%;
-	left: calc(50% - 150px);
+	bottom: 0px;
+	right: 50px;
 	width: 310px;
 	height: auto;
 	background: transparent;
@@ -169,10 +151,10 @@ body {
 #settings #settings_text li {
 	display: block;
 	width: 300px;
-	height: 30px;
+	height: 20px;
 	background: #CCC;
 	text-align: center;
-	line-height: 30px;
+	line-height: 20px;
 	font-family: Gotham;
 	cursor: pointer;
 	padding: 5px;
