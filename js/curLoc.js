@@ -1,17 +1,86 @@
 /**
  * Created by Sadman on 2014-11-15.
  */
+/*
+    var sports_toggle = true;
+    var concerts_toggle = true;
+    var stores_toggle = true;
+    var food_toggle = true;
+    var events_toggle = true;*/
+
+    var geocoder = new google.maps.Geocoder();
+    var map;
+    var tags = new Array(5); //stores the tags to be displayed on screen
+    var time = 24; //24 hours from now (for events happening nearby)
+    var radius = 2; //default radius for PoV around the map in km
+    var zoomVal = 13;    
+
+    //var events_arr = Array(true, true, true, true, true);
+
+    $("#sports").click(function() {
+        //if ($("#"))
+        if (tags[1] == false) {
+            $("#sports").css("background", "#CCC");
+            tags[1] = true;
+        }
+        else {
+            $("#sports").css("background", "#FFF");
+            tags[1] = false;
+        }
+    });
+
+    $("#concerts").click(function() {
+        //if ($("#"))
+        if (tags[2] == false) {
+            $("#concerts").css("background", "#CCC");
+            tags[2] = true;
+        }
+        else {
+            $("#concerts").css("background", "#FFF");
+            tags[2] = false;
+        }
+    });
+
+    $("#stores").click(function() {
+        //if ($("#"))
+        if (tags[3] == false) {
+            $("#stores").css("background", "#CCC");
+            tags[3] = true;
+        }
+        else {
+            $("#stores").css("background", "#FFF");
+            tags[3] = false;
+        }
+    });
+
+    $("#food").click(function() {
+        //if ($("#"))
+        if (tags[4] == false) {
+            $("#food").css("background", "#CCC");
+            tags[4] = true;
+        }
+        else {
+            $("#food").css("background", "#FFF");
+            tags[4] = false;
+        }
+    });
+
+    $("#events").click(function() {
+        //if ($("#"))
+        if (tags[0] == false) {
+            $("#events").css("background", "#CCC");
+            tags[0] = true;
+        }
+        else {
+            $("#events").css("background", "#FFF");
+            tags[0] = false;
+        }
+    });
 
 
 // Note: This example requires that you consent to location sharing when
 // prompted by your browser. If you see a blank space instead of the map, this
 // is probably because you have denied permission for location sharing.
-var geocoder = new google.maps.Geocoder();
-var map;
-var tags = new Array(5); //stores the tags to be displayed on screen
-var time = 24; //24 hours from now (for events happening nearby)
-var radius = 2; //default radius for PoV around the map in km
-var zoomVal = 13;
 
 //gets an array of events shows them on the map using markers
 function handleEvents (objects) {
