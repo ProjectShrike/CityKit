@@ -157,7 +157,7 @@ function handleEvents (objects) {
 }
 
 function eventGeoListener(eventMarker, info, objects, i){
-    geocoder.geocode( { 'address': objects[i].xCoordinate + objects[i].yCoordinate}, function(results, status) {
+    geocoder.geocode( { 'address': objects[i].location}, function(results, status) {
         if (status == google.maps.GeocoderStatus.OK && tags[objects[i].category]) {
             var image = {
                 url: 'images/MapMarkers/'+objects[i].category+'.png',
@@ -223,7 +223,7 @@ function handleLandmarks (objects) {
 }
 
 function eventLandListener(landMarker, info, objects, i){
-    geocoder.geocode( { 'address': objects[i].location}, function(results, status) {
+    geocoder.geocode( { 'address': objects[i].xCoordinate + ',' + objects[i].yCoordinate }, function(results, status) {
         if (status == google.maps.GeocoderStatus.OK && tags[objects[i].index]) {
             var image = {
                 url: 'images/MapMarkers/'+objects[i].index+'.png',
