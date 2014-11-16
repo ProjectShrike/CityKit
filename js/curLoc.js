@@ -339,21 +339,9 @@ function eventLandListener(landMarker, info, objects, i){
 
             });
             markers.push(landMarker[i]);
-            var url = '';
-            var phone = '';
-
-            if (objects[i].path != '')
-                url = '<a target="_blank" href ="' + objects[i].path+'" id="loc_link">Website</a>';
-            if (objects[i].phone != '')
-                phone = '<b>Phone: </b>'+objects[i].phone;
 
             var desc = '<div id="content" style="overflow: hidden !important">'+
-                '<h4 id="firstHeading" class="firstHeading">'+ objects[i].name+ '</h4>'+
-                '<div id="contact">'+
-                url+
-                '<br>'+
-                phone+
-                '</div>'+
+                '<h4 id="firstHeading" class="firstHeading">'+ objects[i].landmark+ '</h4>'+
                 '</div>';
 
             //adds the information provided by the business
