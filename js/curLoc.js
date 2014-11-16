@@ -8,16 +8,27 @@
     var radius = 2; //default radius for PoV around the map in km
     var zoomVal = 13;
     var curLocation;
+    var markers = [];
+
+function setAllMap(map) {
+    for (var i = 0; i < markers.length; i++) {
+        markers[i].setMap(map);
+    }
+}
 
     //gets called after each call event
     function toggleListener () {
         //clear the screen
         setAllMap (null);
+        markers[];
+
         var marker = new google.maps.Marker({
             map:map,
             position: curLocation,
             animation: google.maps.Animation.BOUNCE
         });
+        markers.push(marker);
+        console.log("lol");
         //if either food or stores are selected
         if (tags[3] == true || tags[4] == true) {
             //send in the radius
@@ -36,6 +47,7 @@
                 xmlhttp.send();
             }
         //for events
+        /*
             if (tags[0] == true || tags[1] == true || tags[2] == true) {
                 //send in the time
 
@@ -51,7 +63,7 @@
                 }
                 xmlhttp.open('GET', url, true);
                 xmlhttp.send();
-        }
+        }*/
     }
 
     //event listeners for button toggles
@@ -116,7 +128,6 @@
         else {
             $("#events").css("background", "#FFF");
             tags[0] = false;
-            removeMarker(0);
         }
         toggleListener();
     });
@@ -149,13 +160,14 @@ function eventGeoListener(eventMarker, info, objects, i){
                 // The anchor for this image is the base of the flagpole at 0,32.
                 anchor: new google.maps.Point(0, 32)
             };
-            promo[i] = new google.maps.Marker({
+            eventMarker[i] = new google.maps.Marker({
                 map: map,
                 position: results[0].geometry.location,
                 animation: google.maps.Animation.DROP,
                 icon: image
 
             });
+            markers.push(eventMarker[i]);
             var url = '';
             var phone = '';
 
@@ -221,6 +233,7 @@ function geoListener(promo, info, objects, i){
                 icon: image
 
             });
+            markers.push(promo[i]);
             var url = '';
             var phone = '';
 
