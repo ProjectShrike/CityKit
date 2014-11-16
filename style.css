@@ -179,8 +179,9 @@ body {
 }
 
 #loc_link {
+	float: left;
 	width: 180px; 
-	height: 25px; 
+	height: 25px;
 	background: #4f94dd; 
 	text-align: center; 
 	line-height: 25px; 
