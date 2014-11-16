@@ -27,12 +27,12 @@ function initialize() {
                 position: currentPosition,
                 map: map
             });
-            /*
+
             var infowindow = new google.maps.InfoWindow({
                 map: map,
                 position: pos,
                 content: 'You are currently here!'
-            });*/
+            });
 
             map.setCenter(currentPosition);
         }, function() {
