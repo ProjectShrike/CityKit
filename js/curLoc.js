@@ -8,30 +8,32 @@
 // is probably because you have denied permission for location sharing.
 
 var map;
-//var radius = 2; //default radius for PoV around the map
-//var zoom =
-
+var radius = 2; //default radius for PoV around the map
+var zoomVal = Math.log(6371/(radius*1.5))/Math.log(2); //converts the radius into the zoom value
 
 function initialize() {
     var mapOptions = {
-        zoom: 16
+        zoom: zoomVal
     };
     map = new google.maps.Map(document.getElementById('map-canvas'),
         mapOptions);
 
     // Try HTML5 geolocation
     if(navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function(position) {
-            var pos = new google.maps.LatLng(position.coords.latitude,
-                position.coords.longitude);
-
+        navigator.geolocation.getCurrentPosition(function(location) {
+            var currentPosition = new google.maps.LatLng(location.coords.latitude,
+                location.coords.longitude);
+            var posMarker = new google.maps.Marker ({
+                position: currentPosition,
+                map: map
+            });
             var infowindow = new google.maps.InfoWindow({
                 map: map,
                 position: pos,
                 content: 'You are currently here!'
             });
 
-            map.setCenter(pos);
+            map.setCenter(currentPosition);
         }, function() {
             handleNoGeolocation(true);
         });
