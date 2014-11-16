@@ -59,31 +59,48 @@
 		</style>
 	</head>
 	<body>
+		<!--
 		<div id="load_title">citykit</div>
 		<div id="loader_page1"></div>
 		<div id="main_loading_bar"></div>
 		<div id="loader_page2"></div>
+	-->
 		<div id="bgwrapper">
 			<div id="title">citykit</div>
 			<div id="slogan"
 			<!-- <input type="text" id="main-search" placeholder="what would you like to do today..." />
 			<div id="main_options">
 				<ul>
-					<li id="butt1" onClick="near_me()">What's near me?</li>
+					<li id="butt1" onClick="near_me()">Fuck bitches...</li>
 					<!--<li id="butt2">I know where I'm going</li>-->
 				</ul>
 			</div> <!-- end main_options div -->
 		</div>
-		<div id="map_load">
-			<div id="load_bar"></div>
-		</div>
 		<div id="map-canvas"></div>
+		<div id="settings_butt">Show Settings</div>
+		<div id="settings">
+			<p>Choose your adventure:</p>
+			<ul id="settings_text">
+				<li id="sports">Sports</li>
+				<li>Biking</li>
+				<li>Pets</li>
+				<li>Businesses</li>
+				<li>Events</li>
+			</ul>
+			<ul id="settings_selectors">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div> <!-- end settings div -->
 	<!--<iframe id="map-canvas" frameborder="0" src="https://www.google.com/maps/embed/v1/search?key=AIzaSyCoj4oT-3zbL-sW9B6Wb4k84xTGrFCcIFo&q=Kitchener&zoom=13">
 	</iframe>-->
 	</body>
 	<script type="text/javascript" src="jquery.js"></script>
 	<script type="text/javascript" src="script.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOAYQWcsQyPxvrWTK1x_8WNTrjBawrVkA"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCOAYQWcsQyPxvrWTK1x_8WNTrjBawrVkA"></script>
 	<script type="text/javascript" src="js/curLoc.js"></script>
 	<script type="text/javascript">
 	$(document).ready(function() {
