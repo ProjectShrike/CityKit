@@ -159,10 +159,8 @@ function initialize() {
     var url = 'http://citykit.ca/promotions';
     var stringData = '';
     xmlhttp.onreadystatechange = function(){
-        if(xmlhttp.readyState == 3){
-            stringData += xmlhttp.responseText;
-        }else if(xmlhttp.readyState == 4){
-            console.log(JSON.parse(stringData));
+        if(xmlhttp.readyState == 4){
+            console.log(JSON.parse(xmlhttp.responseText));
         }
         //handlePromos(results);
     }
