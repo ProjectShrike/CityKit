@@ -8,16 +8,51 @@
 // is probably because you have denied permission for location sharing.
 
 var map;
-var radius = 1; //default radius for PoV around the map
+var radius = 2; //default radius for PoV around the map in km
 var zoomVal = 13;
+
+//gets an array of events in a specific radius and shows them on the map using markers
+function handleLandmarks (results) {
+
+
+}
+
+//gets the data from subscribed businesses
+function handlePromos (results) {
+    var promo = new Array (results.length);
+    var info = new Array (results.length);
+    for (var i = 0; i < results.length; i++) {
+        //adds each of the markers to the screen
+        promo[i] = new google.maps.Marker({
+            map:map,
+            position: results.position,
+            title: results.title,
+            animation: google.maps.Animation.DROP
+            //icon = results.image
+        });
+
+        //adds the information provided by the business
+        info[i] = new google.maps.InfoWindow({
+            content: results.desc,
+            maxWidth: 300
+        });
+
+        google.maps.event.addListener(promo[i], 'click', function() {
+            info[i].open(map,promo[i]);
+        });
+
+    }
+}
+
 function initialize() {
+    //handles the different radius values
     if (radius < 1.5)
         zoomVal = 15;
     else if (radius < 4)
         zoomVal = 14;
     else
         zoomVal = 13;
-    console.log(zoomVal);
+
     var mapOptions = {
         zoom: zoomVal
     };
@@ -33,7 +68,8 @@ function initialize() {
 
             var marker = new google.maps.Marker({
                 map:map,
-                position: pos
+                position: pos,
+                animation: google.maps.Animation.BOUNCE
             });
             /*
             var infowindow = new google.maps.InfoWindow({
