@@ -21,13 +21,6 @@ function setAllMap(map) {
         //clear the screen
         setAllMap (null);
         markers = [];
-
-        var marker = new google.maps.Marker({
-            map:map,
-            position: curLocation,
-            animation: google.maps.Animation.BOUNCE
-        });
-        markers.push(marker);
         //if either food or stores are selected
         if (tags[3] == true || tags[4] == true) {
             //send in the radius
