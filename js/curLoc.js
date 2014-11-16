@@ -160,6 +160,7 @@ function initialize() {
     xmlhttp.onreadystatechange = function(){
         var results = JSON.parse(xmlhttp.responseText);
         handlePromos(results);
+        console.log(results);
     }
 
 
