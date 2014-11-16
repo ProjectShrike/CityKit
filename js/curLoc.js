@@ -92,7 +92,7 @@ function geoListener(promo, info, objects, i){
             if (objects[i].phone != '')
             phone = '<b>Phone: </b>'+objects[i].phone;
 
-            var desc = '<div id="content">'+
+            var desc = '<div id="content" style="overflow: hidden !important">'+
                 '<p id="firstHeading" class="firstHeading">'+ objects[i].name+ '</p>'+
                 '<div id="contact">'+
                 url+
