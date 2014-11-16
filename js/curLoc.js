@@ -89,7 +89,6 @@
         else {
             $("#stores").css("background", "#FFF");
             tags[3] = false;
-            removeMarker(3);
         }
         toggleListener();
     });
@@ -103,7 +102,6 @@
         else {
             $("#food").css("background", "#FFF");
             tags[4] = false;
-            removeMarker(4);
         }
         toggleListener();
     });
@@ -141,12 +139,21 @@ function handleEvents (objects) {
 function eventGeoListener(eventMarker, info, objects, i){
     geocoder.geocode( { 'address': objects[i].location}, function(results, status) {
         if (status == google.maps.GeocoderStatus.OK && tags[objects[i].category]) {
-            eventMarker[i] = new google.maps.Marker({
+            var image = {
+                url: 'images/MapMarkers/'+objects[i].category+'.png',
+                // This marker is 20 pixels wide by 32 pixels tall.
+                size: new google.maps.Size(20, 32),
+                // The origin for this image is 0,0.
+                origin: new google.maps.Point(0,0),
+                // The anchor for this image is the base of the flagpole at 0,32.
+                anchor: new google.maps.Point(0, 32)
+            };
+            promo[i] = new google.maps.Marker({
                 map: map,
-                position: results[0].geometry.location
-                //title: objects[i].name,
-                //animation: google.maps.Animation.DROP
-                //icon = objects.image
+                position: results[0].geometry.location,
+                animation: google.maps.Animation.DROP,
+                icon: image
+
             });
             var url = '';
             var phone = '';
@@ -197,12 +204,21 @@ function handlePromos (objects) {
 function geoListener(promo, info, objects, i){
     geocoder.geocode( { 'address': objects[i].location}, function(results, status) {
         if (status == google.maps.GeocoderStatus.OK && tags[objects[i].category] == true) {
+            var image = {
+                url: 'images/MapMarkers/'+objects[i].category+'.png',
+                // This marker is 20 pixels wide by 32 pixels tall.
+                size: new google.maps.Size(20, 32),
+                // The origin for this image is 0,0.
+                origin: new google.maps.Point(0,0),
+                // The anchor for this image is the base of the flagpole at 0,32.
+                anchor: new google.maps.Point(0, 32)
+            };
             promo[i] = new google.maps.Marker({
                 map: map,
-                position: results[0].geometry.location
-                //title: objects[i].name,
-                //animation: google.maps.Animation.DROP
-                //icon = objects.image
+                position: results[0].geometry.location,
+                animation: google.maps.Animation.DROP,
+                icon: image
+
             });
             var url = '';
             var phone = '';
