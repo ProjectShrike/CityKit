@@ -159,9 +159,10 @@ function initialize() {
     var url = '/promotions';
     xmlhttp.onreadystatechange = function(){
         var results = JSON.parse(xmlhttp.responseText);
-        handlePromos(results);
-        console.log(results);
+        //handlePromos(results);
+        console.log(result);
     }
+    console.log("8====D");
 
 
 }
