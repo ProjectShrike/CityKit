@@ -3,7 +3,7 @@
  */
     var geocoder = new google.maps.Geocoder();
     var map;
-    var tags = new Array(11); //stores the tags to be displayed on screen
+    var tags = new Array(12); //stores the tags to be displayed on screen
     var time = 24; //24 hours from now (for events happening nearby)
     var radius = 2; //default radius for PoV around the map in km
     var zoomVal = 13;
@@ -267,7 +267,7 @@ function initialize() {
     else
         zoomVal = 13;
     //toggles for placeholders on the map
-    tags = [true, true, true, true, true, true, true, true, true, true, true];
+    tags = [true, true, true, true, true, true, true, true, true, true, true, true];
     var mapOptions = {
         zoom: zoomVal
     };
