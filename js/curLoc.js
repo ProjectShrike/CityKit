@@ -21,6 +21,7 @@ function setAllMap(map) {
         //clear the screen
         setAllMap (null);
         markers = [];
+        console.log(tags);
         //if either food or stores are selected
         if (tags[3] == true || tags[4] == true) {
             //send in the radius
@@ -47,7 +48,7 @@ function setAllMap(map) {
                 var stringData = '';
                 xmlhttp.onreadystatechange = function () {
                     if (xmlhttp.readyState == 4) {
-                        console.log(JSON.parse(xmlhttp.responseText));
+                        //console.log(JSON.parse(xmlhttp.responseText));
                         handleEvents(JSON.parse(xmlhttp.responseText).array);
                     }
 
@@ -132,7 +133,7 @@ function handleEvents (objects) {
     var eventMarker = new Array (objects.length);
     var info = new Array (objects.length);
     for (var i = 0; i < objects.length; i++) {
-        console.log(objects[i]);
+        //console.log(objects[i]);
         eventGeoListener(eventMarker, info, objects, i);
     }
 }
@@ -246,7 +247,7 @@ function geoListener(promo, info, objects, i){
                 content: desc,
                 maxWidth: 200
             });
-            console.log(info[i]);
+            //console.log(info[i]);
 
             //adds each of the markers to the screen
             google.maps.event.addListener(promo[i], 'click', function() {
