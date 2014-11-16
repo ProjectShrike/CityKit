@@ -24,7 +24,7 @@ function handleEvents (objects) {
 
 function eventGeoListener(eventMarker, info, objects, i){
     geocoder.geocode( { 'address': objects[i].location}, function(results, status) {
-        if (status == google.maps.GeocoderStatus.OK) {
+        if (status == google.maps.GeocoderStatus.OK && tags[objects[i].category]) {
             eventMarker[i] = new google.maps.Marker({
                 map: map,
                 position: results[0].geometry.location
@@ -129,7 +129,7 @@ function handlePromos (objects) {
 
 function geoListener(promo, info, objects, i){
     geocoder.geocode( { 'address': objects[i].location}, function(results, status) {
-        if (status == google.maps.GeocoderStatus.OK) {
+        if (status == google.maps.GeocoderStatus.OK && tags[objects[i].category] == true) {
             promo[i] = new google.maps.Marker({
                 map: map,
                 position: results[0].geometry.location
@@ -186,7 +186,8 @@ function initialize() {
         zoomVal = 14;
     else
         zoomVal = 13;
-
+    //toggles for placeholders on the map
+    tags = [true, true, true, true, true];
     var mapOptions = {
         zoom: zoomVal
     };
@@ -221,20 +222,40 @@ function initialize() {
         handleNoGeolocation(false);
     }
 
-    //dummy code to test parsing and displaying markers on the map
-    if (tags[3] == true || tags[4] == true) {
-        var xmlhttp = new XMLHttpRequest();
-        var url = 'http://citykit.ca/promotions';
-        var stringData = '';
-        xmlhttp.onreadystatechange = function () {
-            if (xmlhttp.readyState == 4) {
-                handlePromos(JSON.parse(xmlhttp.responseText).array);
-                //console.log(JSON.parse(xmlhttp.responseText));
-            }
+    //if either food or stores are selected
+    if (true/*one of the buttons get clicked*/) {
+        if (tags[3] == true || tags[4] == true) {
+            //send in the radius
 
+            var xmlhttp = new XMLHttpRequest();
+            var url = 'http://citykit.ca/promotions';
+            var stringData = '';
+            xmlhttp.onreadystatechange = function () {
+                if (xmlhttp.readyState == 4) {
+                    handlePromos(JSON.parse(xmlhttp.responseText).array);
+                    //console.log(JSON.parse(xmlhttp.responseText));
+                }
+
+            }
+            xmlhttp.open('GET', url, true);
+            xmlhttp.send();
         }
-        xmlhttp.open('GET', url, true);
-        xmlhttp.send();
+        if (tags[0] == true || tags[1] == true || tags[2] == true) {
+            //send in the time
+
+            var xmlhttp = new XMLHttpRequest();
+            var url = 'http://citykit.ca/events';
+            var stringData = '';
+            xmlhttp.onreadystatechange = function () {
+                if (xmlhttp.readyState == 4) {
+                    handleEvents(JSON.parse(xmlhttp.responseText).array);
+                    //console.log(JSON.parse(xmlhttp.responseText));
+                }
+
+            }
+            xmlhttp.open('GET', url, true);
+            xmlhttp.send();
+        }
     }
 }
 
