@@ -297,10 +297,10 @@ function handleNoGeolocation(errorFlag) {
     } else {
         var content = 'Error: Your browser doesn\'t support geolocation.';
     }
-
+    curLocation = new google.maps.LatLng(60, 105);
     var options = {
         map: map,
-        position: new google.maps.LatLng(60, 105),
+        position: curLocation,
         content: content
     };
 
