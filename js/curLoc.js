@@ -63,6 +63,7 @@ function handleEvents (results) {
 
 //gets the data from subscribed businesses
 function handlePromos (objects) {
+    console.log(objects[0].name);
     var promo = new Array (objects.length);
     var info = new Array (objects.length);
     for (var i = 0; i < objects.length; i++) {
