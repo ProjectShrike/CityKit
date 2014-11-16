@@ -72,7 +72,7 @@ function handlePromos (objects) {
 }
 
 function geoListener(promo, info, objects, i){
-    geocoder.geocode( { 'address': objects[i].address}, function(results, status) {
+    geocoder.geocode( { 'address': objects[i].location}, function(results, status) {
         if (status == google.maps.GeocoderStatus.OK) {
             promo[i] = new google.maps.Marker({
                 map:map,
