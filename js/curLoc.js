@@ -156,7 +156,7 @@ function initialize() {
     }
 
     var xmlhttp = new XMLHttpRequest();
-    var url = 'app.kitchener.ca/opendata/Json/Addresses.json';
+    var url = 'http://app.kitchener.ca/opendata/Json/Addresses.json';
     xmlhttp.onreadystatechange = function(){
         console.log(JSON.parse(xmlhttp.responseText));
         //handlePromos(results);

@@ -5,15 +5,16 @@ City Kit
 
 ###Contributors
 ####Developers
+
 Web:
 * Wojtek Swiderski
 * Sadman Kazi
 * Sahibjot Saggu
+* Angad Kashyap
 App:
 * Priyesh Patel
 * Umesh Khanna
-####Mentors
-  *
+
 ####Marketing
 * Syed Haque
 * Bo Peng
