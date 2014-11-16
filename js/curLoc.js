@@ -109,7 +109,7 @@ function geoListener(promo, info, objects, i){
             //adds the information provided by the business
             info[i] = new google.maps.InfoWindow({
                 content: desc,
-                maxWidth: 300
+                maxWidth: 200
             });
             console.log(info[i]);
 
