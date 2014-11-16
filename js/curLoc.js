@@ -34,7 +34,7 @@ function initialize() {
                 content: 'You are currently here!'
             });*/
 
-            map.setCenter(currentPosition);
+            map.setCenter(map);
         }, function() {
             handleNoGeolocation(true);
         });
@@ -60,6 +60,7 @@ function handleNoGeolocation(errorFlag) {
     var infowindow = new google.maps.InfoWindow(options);
     map.setCenter(options.position);
 }
+
 
 google.maps.event.addDomListener(window, 'load', initialize);
 
