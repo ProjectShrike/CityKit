@@ -177,3 +177,18 @@ body {
 #settings #settings_text #update:hover {
 	background: #3987db;
 }
+
+#loc_link {
+	width: 180px; 
+	height: 25px; 
+	background: #4f94dd; 
+	text-align: center; 
+	line-height: 25px; 
+	font-family: Gotham;
+	text-decoration: none;
+	color: #FFF;
+}
+
+#loc_link:hover {
+	background: #3987db;
+}
