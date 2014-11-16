@@ -1,22 +1,33 @@
 /**
  * Created by Sadman on 2014-11-15.
  */
-/*
-    var sports_toggle = true;
-    var concerts_toggle = true;
-    var stores_toggle = true;
-    var food_toggle = true;
-    var events_toggle = true;*/
-
     var geocoder = new google.maps.Geocoder();
     var map;
     var tags = new Array(5); //stores the tags to be displayed on screen
     var time = 24; //24 hours from now (for events happening nearby)
     var radius = 2; //default radius for PoV around the map in km
     var zoomVal = 13;
+    var curLocation;
+    var markers = [];
 
-    //var events_arr = Array(true, true, true, true, true);
+function setAllMap(map) {
+    for (var i = 0; i < markers.length; i++) {
+        markers[i].setMap(map);
+    }
+}
+
+    //gets called after each call event
     function toggleListener () {
+        //clear the screen
+        setAllMap (null);
+        markers = [];
+
+        var marker = new google.maps.Marker({
+            map:map,
+            position: curLocation,
+            animation: google.maps.Animation.BOUNCE
+        });
+        markers.push(marker);
         //if either food or stores are selected
         if (tags[3] == true || tags[4] == true) {
             //send in the radius
@@ -34,6 +45,8 @@
                 xmlhttp.open('GET', url, true);
                 xmlhttp.send();
             }
+        //for events
+        /*
             if (tags[0] == true || tags[1] == true || tags[2] == true) {
                 //send in the time
 
@@ -49,7 +62,7 @@
                 }
                 xmlhttp.open('GET', url, true);
                 xmlhttp.send();
-        }
+        }*/
     }
 
     //event listeners for button toggles
@@ -63,6 +76,7 @@
             $("#sports").css("background", "#FFF");
             tags[1] = false;
         }
+        toggleListener();
     });
 
     $("#concerts").click(function() {
@@ -75,6 +89,7 @@
             $("#concerts").css("background", "#FFF");
             tags[2] = false;
         }
+        toggleListener();
     });
 
     $("#stores").click(function() {
@@ -87,6 +102,7 @@
             $("#stores").css("background", "#FFF");
             tags[3] = false;
         }
+        toggleListener();
     });
 
     $("#food").click(function() {
@@ -99,6 +115,7 @@
             $("#food").css("background", "#FFF");
             tags[4] = false;
         }
+        toggleListener();
     });
 
     $("#events").click(function() {
@@ -111,9 +128,12 @@
             $("#events").css("background", "#FFF");
             tags[0] = false;
         }
+        toggleListener();
     });
 
+function removeMarkers (index) {
 
+}
 // Note: This example requires that you consent to location sharing when
 // prompted by your browser. If you see a blank space instead of the map, this
 // is probably because you have denied permission for location sharing.
@@ -130,13 +150,23 @@ function handleEvents (objects) {
 function eventGeoListener(eventMarker, info, objects, i){
     geocoder.geocode( { 'address': objects[i].location}, function(results, status) {
         if (status == google.maps.GeocoderStatus.OK && tags[objects[i].category]) {
+            var image = {
+                url: 'images/MapMarkers/'+objects[i].category+'.png',
+                // This marker is 20 pixels wide by 32 pixels tall.
+                size: new google.maps.Size(33, 44),
+                // The origin for this image is 0,0.
+                origin: new google.maps.Point(0,0),
+                // The anchor for this image is the base of the flagpole at 0,32.
+                anchor: new google.maps.Point(0, 32)
+            };
             eventMarker[i] = new google.maps.Marker({
                 map: map,
-                position: results[0].geometry.location
-                //title: objects[i].name,
-                //animation: google.maps.Animation.DROP
-                //icon = objects.image
+                position: results[0].geometry.location,
+                animation: google.maps.Animation.DROP,
+                icon: image
+
             });
+            markers.push(eventMarker[i]);
             var url = '';
             var phone = '';
 
@@ -172,55 +202,6 @@ function eventGeoListener(eventMarker, info, objects, i){
         }
     });
 }
-/*
-function handleEvents (results) {
-    var eventMarker = new Array(results.length);
-    var info = new Array(results.length);
-    for (var i = 0; i < results.length; i++) {
-        //adds each of the markers to the screen
-        eventMarker[i] = new google.maps.Marker({
-            map: map,
-            position: results.position,
-            title: results.name,
-            animation: google.maps.Animation.DROP
-            //icon = results.image
-        });
-
-        var url = '';
-        var phone = '';
-
-        if (results[i].url != '')
-            url = '<b>Website: </b>' + results[i].url;
-        if (results[i].phone != '')
-            phone = '<b>Phone: </b>' + results[i].phone;
-        var desc = '<div id="content">' +
-            '<h1 id="firstHeading" class="firstHeading">results[i].name</h1>' +
-            '<div id="contact">' +
-            '<b>Website: </b>' +
-            results[i].url +
-            '<br>' +
-            phone +
-            '</div>' +
-            '<div id="bodyContent">' +
-            '<p>' +
-            results[i].message +
-            '</p>' +
-            '</div>' +
-            '</div>';
-
-        //adds the information provided by the business
-        info[i] = new google.maps.InfoWindow({
-            content: desc,
-            maxWidth: 300
-        });
-
-        google.maps.event.addListener(promo[i], 'click', function () {
-            info[i].open(map, eventMarker[i]);
-        });
-
-
-    }
-}*/
 
 //gets the data from subscribed businesses
 function handlePromos (objects) {
@@ -235,13 +216,23 @@ function handlePromos (objects) {
 function geoListener(promo, info, objects, i){
     geocoder.geocode( { 'address': objects[i].location}, function(results, status) {
         if (status == google.maps.GeocoderStatus.OK && tags[objects[i].category] == true) {
+            var image = {
+                url: 'images/MapMarkers/'+objects[i].category+'.png',
+                // This marker is 20 pixels wide by 32 pixels tall.
+                size: new google.maps.Size(33, 44),
+                // The origin for this image is 0,0.
+                origin: new google.maps.Point(0,0),
+                // The anchor for this image is the base of the flagpole at 0,32.
+                anchor: new google.maps.Point(0, 32)
+            };
             promo[i] = new google.maps.Marker({
                 map: map,
-                position: results[0].geometry.location
-                //title: objects[i].name,
-                //animation: google.maps.Animation.DROP
-                //icon = objects.image
+                position: results[0].geometry.location,
+                animation: google.maps.Animation.DROP,
+                icon: image
+
             });
+            markers.push(promo[i]);
             var url = '';
             var phone = '';
 
@@ -258,12 +249,6 @@ function geoListener(promo, info, objects, i){
                 '<br>'+
                 phone+
                 '</div>'+
-                /*
-                '<div id="bodyContent">'+
-                '<p>'+
-                objects[i].description+
-                '</p>'+
-                '</div>'+*/
                 '</div>';
 
             //adds the information provided by the business
@@ -292,7 +277,7 @@ function initialize() {
     else
         zoomVal = 13;
     //toggles for placeholders on the map
-    tags = [true, true, true, true, true];
+    tags = [false, false, false, true, true];
     var mapOptions = {
         zoom: zoomVal
     };
@@ -303,22 +288,11 @@ function initialize() {
     if(navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
 
-            var pos = new google.maps.LatLng(position.coords.latitude,
+            curLocation = new google.maps.LatLng(position.coords.latitude,
                 position.coords.longitude);
 
-            var marker = new google.maps.Marker({
-                map:map,
-                position: pos,
-                animation: google.maps.Animation.BOUNCE
-            });
-            /*
-            var infowindow = new google.maps.InfoWindow({
-                map: map,
-                position: pos,
-                content: 'Location found using HTML5.'
-            });*/
-
-            map.setCenter(pos);
+            console.log("lol");
+            map.setCenter(curLocation);
         }, function() {
             handleNoGeolocation(true);
         });
@@ -326,6 +300,7 @@ function initialize() {
         // Browser doesn't support Geolocation
         handleNoGeolocation(false);
     }
+    toggleListener();
 }
 
 function handleNoGeolocation(errorFlag) {
@@ -334,10 +309,10 @@ function handleNoGeolocation(errorFlag) {
     } else {
         var content = 'Error: Your browser doesn\'t support geolocation.';
     }
-
+    curLocation = new google.maps.LatLng(60, 105);
     var options = {
         map: map,
-        position: new google.maps.LatLng(60, 105),
+        position: curLocation,
         content: content
     };
 
