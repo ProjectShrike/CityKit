@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ada089d2-a466-44e8-b784-226c608c9f89" name="Default" comment="Took out the description from info view">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
+    <list default="true" id="ada089d2-a466-44e8-b784-226c608c9f89" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/curLoc.js" afterPath="$PROJECT_DIR$/js/curLoc.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.css" afterPath="$PROJECT_DIR$/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -34,11 +32,11 @@
       <file leaf-file-name="curLoc.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/curLoc.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3739003" vertical-offset="1292" max-vertical-offset="3434">
+            <state vertical-scroll-proportion="0.5234604" vertical-offset="1190" max-vertical-offset="3434">
               <caret line="93" column="85" selection-start-line="93" selection-start-column="85" selection-end-line="93" selection-end-column="85" />
               <folding>
                 <element signature="e#0#43#0" expanded="false" />
-                <marker date="1416135418444" expanded="true" signature="2973:3000" placeholder="..." />
+                <marker date="1416135531743" expanded="true" signature="2973:3000" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -47,8 +45,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2701" max-vertical-offset="3400">
-              <caret line="181" column="16" selection-start-line="181" selection-start-column="16" selection-end-line="181" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2701" max-vertical-offset="3434">
+              <caret line="191" column="24" selection-start-line="191" selection-start-column="24" selection-end-line="191" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -399,7 +397,7 @@
       <workItem from="1416112626260" duration="1131000" />
       <workItem from="1416113762941" duration="17887000" />
       <workItem from="1416133380401" duration="1829000" />
-      <workItem from="1416135216936" duration="205000" />
+      <workItem from="1416135216936" duration="318000" />
     </task>
     <task id="LOCAL-00001" summary="Added the current position on the map script">
       <created>1416089048611</created>
@@ -791,11 +789,17 @@
       <option name="project" value="LOCAL" />
       <updated>1416135248926</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="Took out the description from info view">
+      <created>1416135425537</created>
+      <option name="number" value="00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1416135425537</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27531000" />
+    <option name="totallyTimeSpent" value="27644000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -892,7 +896,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#43#0" expanded="false" />
-            <marker date="1416135418444" expanded="true" signature="2973:3000" placeholder="..." />
+            <marker date="1416135531743" expanded="true" signature="2973:3000" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -911,7 +915,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#43#0" expanded="false" />
-            <marker date="1416135418444" expanded="true" signature="2973:3000" placeholder="..." />
+            <marker date="1416135531743" expanded="true" signature="2973:3000" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -930,7 +934,7 @@
           <caret line="33" column="15" selection-start-line="28" selection-start-column="15" selection-end-line="33" selection-end-column="15" />
           <folding>
             <element signature="e#0#43#0" expanded="false" />
-            <marker date="1416135418444" expanded="true" signature="2973:3000" placeholder="..." />
+            <marker date="1416135531743" expanded="true" signature="2973:3000" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -949,7 +953,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#43#0" expanded="false" />
-            <marker date="1416135418444" expanded="true" signature="2973:3000" placeholder="..." />
+            <marker date="1416135531743" expanded="true" signature="2973:3000" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -968,7 +972,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#43#0" expanded="false" />
-            <marker date="1416135418444" expanded="true" signature="2973:3000" placeholder="..." />
+            <marker date="1416135531743" expanded="true" signature="2973:3000" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -998,19 +1002,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2701" max-vertical-offset="3400">
-          <caret line="181" column="16" selection-start-line="181" selection-start-column="16" selection-end-line="181" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2701" max-vertical-offset="3434">
+          <caret line="191" column="24" selection-start-line="191" selection-start-column="24" selection-end-line="191" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/curLoc.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3739003" vertical-offset="1292" max-vertical-offset="3434">
+        <state vertical-scroll-proportion="0.5234604" vertical-offset="1190" max-vertical-offset="3434">
           <caret line="93" column="85" selection-start-line="93" selection-start-column="85" selection-end-line="93" selection-end-column="85" />
           <folding>
             <element signature="e#0#43#0" expanded="false" />
-            <marker date="1416135418444" expanded="true" signature="2973:3000" placeholder="..." />
+            <marker date="1416135531743" expanded="true" signature="2973:3000" placeholder="..." />
           </folding>
         </state>
       </provider>

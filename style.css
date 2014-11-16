@@ -188,6 +188,8 @@ body {
 	font-family: Gotham;
 	text-decoration: none;
 	color: #FFF;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 #loc_link:hover {
