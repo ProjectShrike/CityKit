@@ -12,6 +12,7 @@ var radius = 2; //default radius for PoV around the map in km
 var zoomVal = 13;
 
 //gets an array of events shows them on the map using markers
+/*
 function handleEvents (results) {
     var eventMarker = new Array(results.length);
     var info = new Array(results.length);
@@ -59,7 +60,7 @@ function handleEvents (results) {
 
 
     }
-}
+}*/
 
 //gets the data from subscribed businesses
 function handlePromos (objects) {
@@ -75,8 +76,8 @@ function geoListener(promo, info, objects, i){
     geocoder.geocode( { 'address': objects[i].location}, function(results, status) {
         if (status == google.maps.GeocoderStatus.OK) {
             promo[i] = new google.maps.Marker({
-                map:map,
-                position: results[0].geometry.position,
+                map: map,
+                position: new google.maps.LatLng(60, 105),
                 title: objects[i].name,
                 animation: google.maps.Animation.DROP
                 //icon = objects.image
