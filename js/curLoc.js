@@ -82,7 +82,6 @@ function geoListener(promo, info, objects, i){
                 //animation: google.maps.Animation.DROP
                 //icon = objects.image
             });
-            console.log(promo[i]);
             var url = '';
             var phone = '';
 
@@ -94,7 +93,7 @@ function geoListener(promo, info, objects, i){
             phone = '<b>Phone: </b>'+objects[i].phone;
 
             var desc = '<div id="content">'+
-                '<h1 id="firstHeading" class="firstHeading">objects[i].name</h1>'+
+                '<h1 id="firstHeading" class="firstHeading">'+ objects[i].name+ '</h1>'+
                 '<div id="contact">'+
                 url+
                 '<br>'+
@@ -173,17 +172,12 @@ function initialize() {
     xmlhttp.onreadystatechange = function(){
         if(xmlhttp.readyState == 4){
             handlePromos(JSON.parse(xmlhttp.responseText).array);
-            console.log(JSON.parse(xmlhttp.responseText).array);
             //console.log(JSON.parse(xmlhttp.responseText));
         }
 
     }
-
     xmlhttp.open('GET', url, true);
     xmlhttp.send();
-    console.log('8====D');
-
-
 }
 
 function handleNoGeolocation(errorFlag) {
