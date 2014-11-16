@@ -57,6 +57,23 @@ function setAllMap(map) {
                 exmlhttp.open('GET', url, true);
                 exmlhttp.send();
         }
+
+        if (tags[5] == true || tags[6] == true || tags[7] == true || tags[8] == true || tags[9] == true || tags[10] == true || tags[11] == true) {
+            //send in the time
+
+            var sxmlhttp = new XMLHttpRequest();
+            var url = 'http://citykit.ca/events/'+time;
+            var stringData = '';
+            sxmlhttp.onreadystatechange = function () {
+                if (sxmlhttp.readyState == 4) {
+                    //console.log(JSON.parse(xmlhttp.responseText));
+                    handleLandmarks(JSON.parse(sxmlhttp.responseText).array);
+                }
+
+            }
+            sxmlhttp.open('GET', url, true);
+            sxmlhttp.send();
+        }
     }
 
     //event listeners for button toggles
@@ -188,6 +205,70 @@ function eventGeoListener(eventMarker, info, objects, i){
             //adds each of the markers to the screen
             google.maps.event.addListener(eventMarker[i], 'click', function() {
                 info[i].open(map,eventMarker[i]);
+            });
+        } else {
+            alert('Geocode was not successful for the following reason: ' + status);
+        }
+    });
+}
+
+//gets an array of landmarks shows them on the map using markers
+function handleLandmarks (objects) {
+    var landMarker = new Array (objects.length);
+    var info = new Array (objects.length);
+    for (var i = 0; i < objects.length; i++) {
+        //console.log(objects[i]);
+        eventLandListener(landMarker, info, objects, i);
+    }
+}
+
+function eventLandListener(landMarker, info, objects, i){
+    geocoder.geocode( { 'address': objects[i].location}, function(results, status) {
+        if (status == google.maps.GeocoderStatus.OK && tags[objects[i].index]) {
+            var image = {
+                url: 'images/MapMarkers/'+objects[i].index+'.png',
+                // This marker is 20 pixels wide by 32 pixels tall.
+                size: new google.maps.Size(33, 44),
+                // The origin for this image is 0,0.
+                origin: new google.maps.Point(0,0),
+                // The anchor for this image is the base of the flagpole at 0,32.
+                anchor: new google.maps.Point(0, 32)
+            };
+            landMarker[i] = new google.maps.Marker({
+                map: map,
+                position: results[0].geometry.location,
+                animation: google.maps.Animation.DROP,
+                icon: image
+
+            });
+            markers.push(landMarker[i]);
+            var url = '';
+            var phone = '';
+
+            if (objects[i].path != '')
+                url = '<a target="_blank" href ="' + objects[i].path+'" id="loc_link">Website</a>';
+            if (objects[i].phone != '')
+                phone = '<b>Phone: </b>'+objects[i].phone;
+
+            var desc = '<div id="content" style="overflow: hidden !important">'+
+                '<h4 id="firstHeading" class="firstHeading">'+ objects[i].name+ '</h4>'+
+                '<div id="contact">'+
+                url+
+                '<br>'+
+                phone+
+                '</div>'+
+                '</div>';
+
+            //adds the information provided by the business
+            info[i] = new google.maps.InfoWindow({
+                content: desc,
+                maxWidth: 200
+            });
+            //onsole.log(info[i]);
+
+            //adds each of the markers to the screen
+            google.maps.event.addListener(landMarker[i], 'click', function() {
+                info[i].open(map,landMarker[i]);
             });
         } else {
             alert('Geocode was not successful for the following reason: ' + status);

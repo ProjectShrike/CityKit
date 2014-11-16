@@ -8,7 +8,7 @@
 3. Stores
 4. Food
 ####Landmarks
-5. Sports Fields
+5.
 6. Museums
 7. Community Centers
 8. Public Art
