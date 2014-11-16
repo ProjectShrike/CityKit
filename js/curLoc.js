@@ -66,13 +66,14 @@ function handlePromos (objects) {
     console.log(objects[0].name);
     var promo = new Array (objects.length);
     var info = new Array (objects.length);
-    for (var i = 0; i < objects.length; i++) {
+    var i;
+    for (i = 0; i < objects.length; i++) {
         geocoder.geocode( { 'address': objects[i].location}, function(results, status) {
             if (status == google.maps.GeocoderStatus.OK) {
                 promo[i] = new google.maps.Marker({
                     map:map,
                     position: results[0].geometry.position,
-                    title: objects[0].name,
+                    title: objects[i].name,
                     animation: google.maps.Animation.DROP
                     //icon = objects.image
                 });
