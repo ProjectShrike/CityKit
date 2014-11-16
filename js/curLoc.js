@@ -43,13 +43,13 @@ function setAllMap(map) {
          if (tags[0] == true || tags[1] == true || tags[2] == true) {
                 //send in the time
 
-                var xmlhttp = new XMLHttpRequest();
+                var exmlhttp = new XMLHttpRequest();
                 var url = 'http://citykit.ca/events/'+time;
                 var stringData = '';
                 xmlhttp.onreadystatechange = function () {
-                    if (xmlhttp.readyState == 4) {
+                    if (exmlhttp.readyState == 4) {
                         //console.log(JSON.parse(xmlhttp.responseText));
-                        handleEvents(JSON.parse(xmlhttp.responseText).array);
+                        handleEvents(JSON.parse(exmlhttp.responseText).array);
                     }
 
                 }
