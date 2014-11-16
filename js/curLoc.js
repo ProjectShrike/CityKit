@@ -71,7 +71,7 @@ function handlePromos (objects) {
                 promo[i] = new google.maps.Marker({
                     map:map,
                     position: results[0].geometry.position,
-                    title: objects.name,
+                    title: objects[i].name,
                     animation: google.maps.Animation.DROP
                     //icon = objects.image
                 });
@@ -79,11 +79,11 @@ function handlePromos (objects) {
                 var url = '';
                 var phone = '';
 
-                if (objects[i].path != '')
+                //if (objects[i].path != '')
                     url = '<b>Website: </b><a href ="'+
                     objects[i].path+'">'
                     +objects[i].path+'</a>';
-                if (objects[i].phone != '')
+                //if (objects[i].phone != '')
                     phone = '<b>Phone: </b>'+objects[i].phone;
 
                 var desc = '<div id="content">'+
