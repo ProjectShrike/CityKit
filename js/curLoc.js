@@ -62,7 +62,7 @@ function setAllMap(map) {
             //send in the time
 
             var sxmlhttp = new XMLHttpRequest();
-            var url = 'http://citykit.ca/events/'+time;
+            var url = 'http://citykit.ca/landmarks/';
             var stringData = '';
             sxmlhttp.onreadystatechange = function () {
                 if (sxmlhttp.readyState == 4) {
@@ -157,7 +157,7 @@ function handleEvents (objects) {
 }
 
 function eventGeoListener(eventMarker, info, objects, i){
-    geocoder.geocode( { 'address': objects[i].location}, function(results, status) {
+    geocoder.geocode( { 'address': objects[i].xCoordinate + objects[i].yCoordinate}, function(results, status) {
         if (status == google.maps.GeocoderStatus.OK && tags[objects[i].category]) {
             var image = {
                 url: 'images/MapMarkers/'+objects[i].category+'.png',
