@@ -8,10 +8,65 @@
 // is probably because you have denied permission for location sharing.
 var geocoder = new google.maps.Geocoder();
 var map;
+var tags; //stores the tags to be displayed on screen
+var time = 24; //24 hours from now (for events happening nearby)
 var radius = 2; //default radius for PoV around the map in km
 var zoomVal = 13;
 
 //gets an array of events shows them on the map using markers
+function handleEvents (objects) {
+    var eventMarker = new Array (objects.length);
+    var info = new Array (objects.length);
+    for (var i = 0; i < objects.length; i++) {
+        eventGeoListener(eventMarker, info, objects, i);
+    }
+}
+
+function eventGeoListener(eventMarker, info, objects, i){
+    geocoder.geocode( { 'address': objects[i].location}, function(results, status) {
+        if (status == google.maps.GeocoderStatus.OK) {
+            eventMarker[i] = new google.maps.Marker({
+                map: map,
+                position: results[0].geometry.location
+                //title: objects[i].name,
+                //animation: google.maps.Animation.DROP
+                //icon = objects.image
+            });
+            var url = '';
+            var phone = '';
+
+            if (objects[i].path != '')
+                url = '<a target="_blank" href ="' + objects[i].path+'" id="loc_link">Website</a>';
+            if (objects[i].phone != '')
+                phone = '<b>Phone: </b>'+objects[i].phone;
+
+            var desc = '<div id="content" style="overflow: hidden !important">'+
+                '<h4 id="firstHeading" class="firstHeading">'+ objects[i].name+ '</h4>'+
+                '<b>Time: </b>'+
+                objects[i].time+
+                '<div id="contact">'+
+                url+
+                '<br>'+
+                phone+
+                '</div>'+
+                '</div>';
+
+            //adds the information provided by the business
+            info[i] = new google.maps.InfoWindow({
+                content: desc,
+                maxWidth: 200
+            });
+            console.log(info[i]);
+
+            //adds each of the markers to the screen
+            google.maps.event.addListener(promo[i], 'click', function() {
+                info[i].open(map,eventMarker[i]);
+            });
+        } else {
+            alert('Geocode was not successful for the following reason: ' + status);
+        }
+    });
+}
 /*
 function handleEvents (results) {
     var eventMarker = new Array(results.length);
@@ -86,7 +141,8 @@ function geoListener(promo, info, objects, i){
             var phone = '';
 
             if (objects[i].path != '')
-            url = '<a target="_blank" href ="' + objects[i].path+'" id="loc_link">Get Coupon</a>';
+                url = '<a target="_blank" href ="' + objects[i].path+'" id="loc_link">Get Coupon</a>';
+            else url = objects[i].description;
             if (objects[i].phone != '')
             phone = '<b>Phone: </b>'+objects[i].phone;
 
