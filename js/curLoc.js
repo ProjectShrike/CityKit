@@ -69,16 +69,16 @@ function handlePromos (objects) {
     var penis = 0;
     while (penis < objects.length) {
         var geocoder = new google.maps.Geocoder();
-        geocoder.geocode( { 'address': objects[i].location}, function(results, status) {
+        geocoder.geocode( { 'address': objects[penis].location}, function(results, status) {
             if (status == google.maps.GeocoderStatus.OK) {
-                promo[i] = new google.maps.Marker({
+                promo[penis] = new google.maps.Marker({
                     map:map,
                     position: results[0].geometry.position,
                     //title: objects[i].name,
                     animation: google.maps.Animation.DROP
                     //icon = objects.image
                 });
-                console.log(i);
+                console.log(penis);
                 var url = '';
                 var phone = '';
                 /*
