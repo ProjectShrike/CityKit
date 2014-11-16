@@ -163,7 +163,7 @@ function initialize() {
         console.log(result);
     }
     xmlhttp.open('GET', url, true);
-    xmlhttp.send()
+    xmlhttp.send();
     console.log('8====D');
 
 
