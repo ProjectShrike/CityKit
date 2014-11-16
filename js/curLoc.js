@@ -6,7 +6,7 @@
 // Note: This example requires that you consent to location sharing when
 // prompted by your browser. If you see a blank space instead of the map, this
 // is probably because you have denied permission for location sharing.
-var geocoder = new google.maps.Geocoder();
+
 var map;
 var radius = 2; //default radius for PoV around the map in km
 var zoomVal = 13;
@@ -63,11 +63,12 @@ function handleEvents (results) {
 
 //gets the data from subscribed businesses
 function handlePromos (objects) {
-    console.log(objects[0].name);
+    console.log(objects[2].name);
     var promo = new Array (objects.length);
     var info = new Array (objects.length);
     var i;
     for (i = 0; i < objects.length; i++) {
+        var geocoder = new google.maps.Geocoder();
         geocoder.geocode( { 'address': objects[i].location}, function(results, status) {
             if (status == google.maps.GeocoderStatus.OK) {
                 promo[i] = new google.maps.Marker({
