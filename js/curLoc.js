@@ -10,6 +10,10 @@
     var curLocation;
     var markers = [];
 
+function get_time() {
+    time = parseInt(document.getElementById("time_select").value);
+}
+
 function setAllMap(map) {
     for (var i = 0; i < markers.length; i++) {
         markers[i].setMap(map);
@@ -77,70 +81,163 @@ function setAllMap(map) {
     }
 
     //event listeners for button toggles
-    $("#sports").click(function() {
-        //if ($("#"))
-        if (tags[1] == false) {
-            $("#sports").css("background", "#CCC");
-            tags[1] = true;
-        }
-        else {
-            $("#sports").css("background", "#FFF");
-            tags[1] = false;
-        }
-        toggleListener();
-    });
 
-    $("#concerts").click(function() {
-        //if ($("#"))
-        if (tags[2] == false) {
-            $("#concerts").css("background", "#CCC");
-            tags[2] = true;
-        }
-        else {
-            $("#concerts").css("background", "#FFF");
-            tags[2] = false;
-        }
-        toggleListener();
-    });
+var Options = ["events", "sports", "concerts", "stores", "food", "sports_fields", "museums", "comm_center", "pub_art", "dog_parks", "poi", "playgrounds"];
+$("#events").click(function() {
+    // when activated
+    if ($("#events").css("background-color") == "rgb(204, 204, 204)") {
+        $("#events").css("background-color", "rgb(255, 255, 255)");
+        tags[0] = false;
+    }
+    else {
+        $("#events").css("background-color", "rgb(204, 204, 204)");
+        tags[0] = true;
+    }
+    toggleListener();
+});
 
-    $("#stores").click(function() {
-        //if ($("#"))
-        if (tags[3] == false) {
-            $("#stores").css("background", "#CCC");
-            tags[3] = true;
-        }
-        else {
-            $("#stores").css("background", "#FFF");
-            tags[3] = false;
-        }
-        toggleListener();
-    });
+$("#sports").click(function() {
+    // when activated
+    if ($("#sports").css("background-color") == "rgb(204, 204, 204)") {
+        $("#sports").css("background-color", "rgb(255, 255, 255)");
+        tags[1] = false;
+    }
+    else {
+        $("#sports").css("background-color", "rgb(204, 204, 204)");
+        tags[1] = true;
+    }
+    toggleListener();
+});
 
-    $("#food").click(function() {
-        //if ($("#"))
-        if (tags[4] == false) {
-            $("#food").css("background", "#CCC");
-            tags[4] = true;
-        }
-        else {
-            $("#food").css("background", "#FFF");
-            tags[4] = false;
-        }
-        toggleListener();
-    });
+$("#concerts").click(function() {
+    // when activated
+    if ($("#concerts").css("background-color") == "rgb(204, 204, 204)") {
+        $("#concerts").css("background-color", "rgb(255, 255, 255)");
+        tags[2] = false;
+    }
+    else {
+        $("#concerts").css("background-color", "rgb(204, 204, 204)");
+        tags[2] = true;
+    }
+    toggleListener();
+});
 
-    $("#events").click(function() {
-        //if ($("#"))
-        if (tags[0] == false) {
-            $("#events").css("background", "#CCC");
-            tags[0] = true;
-        }
-        else {
-            $("#events").css("background", "#FFF");
-            tags[0] = false;
-        }
-        toggleListener();
-    });
+$("#stores").click(function() {
+    // when activated
+    if ($("#stores").css("background-color") == "rgb(204, 204, 204)") {
+        $("#stores").css("background-color", "rgb(255, 255, 255)");
+        tags[3] = false;
+    }
+    else {
+        $("#stores").css("background-color", "rgb(204, 204, 204)");
+        tags[3] = true;
+    }
+    toggleListener();
+});
+
+$("#food").click(function() {
+    // when activated
+    if ($("#food").css("background-color") == "rgb(204, 204, 204)") {
+        $("#food").css("background-color", "rgb(255, 255, 255)");
+        tags[4] = false;
+    }
+    else {
+        $("#food").css("background-color", "rgb(204, 204, 204)");
+        tags[4] = true;
+    }
+    toggleListener();
+});
+
+$("#sports_fields").click(function() {
+    // when activated
+    if ($("#sports_fields").css("background-color") == "rgb(204, 204, 204)") {
+        $("#sports_fields").css("background-color", "rgb(255, 255, 255)");
+        tags[11] = false;
+    }
+    else {
+        $("#sports_fields").css("background-color", "rgb(204, 204, 204)");
+        tags[11] = true;
+    }
+    toggleListener();
+});
+
+$("#museums").click(function() {
+    // when activated
+    if ($("#museums").css("background-color") == "rgb(204, 204, 204)") {
+        $("#museums").css("background-color", "rgb(255, 255, 255)");
+        tags[5] = false;
+    }
+    else {
+        $("#museums").css("background-color", "rgb(204, 204, 204)");
+        tags[5] = true;
+    }
+    toggleListener();
+});
+
+$("#comm_center").click(function() {
+    // when activated
+    if ($("#comm_center").css("background-color") == "rgb(204, 204, 204)") {
+        $("#comm_center").css("background-color", "rgb(255, 255, 255)");
+        tags[6] = false;
+    }
+    else {
+        $("#comm_center").css("background-color", "rgb(204, 204, 204)");
+        tags[6] = true;
+    }
+    toggleListener();
+});
+
+$("#pub_art").click(function() {
+    // when activated
+    if ($("#pub_art").css("background-color") == "rgb(204, 204, 204)") {
+        $("#pub_art").css("background-color", "rgb(255, 255, 255)");
+        tags[7] = false;
+    }
+    else {
+        $("#pub_art").css("background-color", "rgb(204, 204, 204)");
+        tags[7] = true;
+    }
+    toggleListener();
+});
+
+$("#dog_parks").click(function() {
+    // when activated
+    if ($("#dog_parks").css("background-color") == "rgb(204, 204, 204)") {
+        $("#dog_parks").css("background-color", "rgb(255, 255, 255)");
+        tags[8] = false;
+    }
+    else {
+        $("#dog_parks").css("background-color", "rgb(204, 204, 204)");
+        tags[8] = true;
+    }
+    toggleListener();
+});
+
+$("#poi").click(function() {
+    // when activated
+    if ($("#poi").css("background-color") == "rgb(204, 204, 204)") {
+        $("#poi").css("background-color", "rgb(255, 255, 255)");
+        tags[9] = false;
+    }
+    else {
+        $("#poi").css("background-color", "rgb(204, 204, 204)");
+        tags[9] = true;
+    }
+    toggleListener();
+});
+
+$("#playgrounds").click(function() {
+    // when activated
+    if ($("#playgrounds").css("background-color") == "rgb(204, 204, 204)") {
+        $("#playgrounds").css("background-color", "rgb(255, 255, 255)");
+        tags[10] = false;
+    }
+    else {
+        $("#playgrounds").css("background-color", "rgb(204, 204, 204)");
+        tags[10] = true;
+    }
+    toggleListener();
+});
 
 // Note: This example requires that you consent to location sharing when
 // prompted by your browser. If you see a blank space instead of the map, this
