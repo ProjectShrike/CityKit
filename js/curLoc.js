@@ -38,7 +38,6 @@ function setAllMap(map) {
                 }
                 xmlhttp.open('GET', url, true);
                 xmlhttp.send();
-                xmlhttp.close();
             }
         //for events
 
@@ -51,13 +50,12 @@ function setAllMap(map) {
                 xmlhttp.onreadystatechange = function () {
                     if (exmlhttp.readyState == 4) {
                         //console.log(JSON.parse(xmlhttp.responseText));
-                        handleEvents(JSON.parse(xmlhttp.responseText).array);
+                        handleEvents(JSON.parse(exmlhttp.responseText).array);
                     }
 
                 }
-                xmlhttp.open('GET', url, true);
-                xmlhttp.send();
-                xmlhttp.close();
+                exmlhttp.open('GET', url, true);
+                exmlhttp.send();
         }
     }
 
