@@ -93,7 +93,7 @@ function geoListener(promo, info, objects, i){
             phone = '<b>Phone: </b>'+objects[i].phone;
 
             var desc = '<div id="content">'+
-                '<h1 id="firstHeading" class="firstHeading">'+ objects[i].name+ '</h1>'+
+                '<h3 id="firstHeading" class="firstHeading">'+ objects[i].name+ '</h3>'+
                 '<div id="contact">'+
                 url+
                 '<br>'+
