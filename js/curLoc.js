@@ -12,6 +12,7 @@
 
 function get_time() {
     time = parseInt(document.getElementById("time_select").value);
+    toggleListener();
 }
 
 function setAllMap(map) {
