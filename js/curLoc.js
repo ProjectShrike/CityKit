@@ -28,7 +28,6 @@ function setAllMap(map) {
             animation: google.maps.Animation.BOUNCE
         });
         markers.push(marker);
-        console.log("lol");
         //if either food or stores are selected
         if (tags[3] == true || tags[4] == true) {
             //send in the radius
@@ -154,7 +153,7 @@ function eventGeoListener(eventMarker, info, objects, i){
             var image = {
                 url: 'images/MapMarkers/'+objects[i].category+'.png',
                 // This marker is 20 pixels wide by 32 pixels tall.
-                size: new google.maps.Size(20, 32),
+                size: new google.maps.Size(33, 44),
                 // The origin for this image is 0,0.
                 origin: new google.maps.Point(0,0),
                 // The anchor for this image is the base of the flagpole at 0,32.
@@ -220,7 +219,7 @@ function geoListener(promo, info, objects, i){
             var image = {
                 url: 'images/MapMarkers/'+objects[i].category+'.png',
                 // This marker is 20 pixels wide by 32 pixels tall.
-                size: new google.maps.Size(20, 32),
+                size: new google.maps.Size(33, 44),
                 // The origin for this image is 0,0.
                 origin: new google.maps.Point(0,0),
                 // The anchor for this image is the base of the flagpole at 0,32.
