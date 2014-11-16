@@ -62,7 +62,7 @@ function setAllMap(map) {
                 exmlhttp.send();
         }
 
-        if (tags[5] == true || tags[6] == true || tags[7] == true || tags[8] == true || tags[9] == true || tags[10] == true || tags[11] == true) {
+        if (tags[5] == true/* || tags[6] == true || tags[7] == true || tags[8] == true || tags[9] == true || tags[10] == true || tags[11] == true*/) {
             //send in the time
 
             var sxmlhttp = new XMLHttpRequest();
@@ -173,7 +173,7 @@ $("#museums").click(function() {
     }
     toggleListener();
 });
-
+/*
 $("#comm_center").click(function() {
     // when activated
     if ($("#comm_center").css("background-color") == "rgb(204, 204, 204)") {
@@ -238,6 +238,7 @@ $("#playgrounds").click(function() {
     }
     toggleListener();
 });
+*/
 
 // Note: This example requires that you consent to location sharing when
 // prompted by your browser. If you see a blank space instead of the map, this
@@ -321,9 +322,9 @@ function handleLandmarks (objects) {
 
 function eventLandListener(landMarker, info, objects, i){
     geocoder.geocode( { 'address': objects[i].xCoordinate + ',' + objects[i].yCoordinate }, function(results, status) {
-        if (status == google.maps.GeocoderStatus.OK && tags[objects[i].index]) {
+        if (status == google.maps.GeocoderStatus.OK && tags[5]) {
             var image = {
-                url: 'images/MapMarkers/'+objects[i].index+'.png',
+                url: 'images/MapMarkers/5.png',
                 // This marker is 20 pixels wide by 32 pixels tall.
                 size: new google.maps.Size(33, 44),
                 // The origin for this image is 0,0.
