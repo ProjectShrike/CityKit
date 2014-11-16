@@ -93,17 +93,18 @@ function geoListener(promo, info, objects, i){
             phone = '<b>Phone: </b>'+objects[i].phone;
 
             var desc = '<div id="content">'+
-                '<h3 id="firstHeading" class="firstHeading">'+ objects[i].name+ '</h3>'+
+                '<p id="firstHeading" class="firstHeading">'+ objects[i].name+ '</p>'+
                 '<div id="contact">'+
                 url+
                 '<br>'+
                 phone+
                 '</div>'+
+                /*
                 '<div id="bodyContent">'+
                 '<p>'+
                 objects[i].description+
                 '</p>'+
-                '</div>'+
+                '</div>'+*/
                 '</div>';
 
             //adds the information provided by the business

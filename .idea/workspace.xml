@@ -31,8 +31,8 @@
       <file leaf-file-name="curLoc.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/curLoc.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6686217" vertical-offset="1397" max-vertical-offset="3451">
-              <caret line="111" column="29" selection-start-line="111" selection-start-column="29" selection-end-line="111" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.41935483" vertical-offset="1397" max-vertical-offset="3468">
+              <caret line="101" column="16" selection-start-line="101" selection-start-column="16" selection-end-line="101" selection-end-column="16" />
               <folding>
                 <element signature="e#0#43#0" expanded="false" />
               </folding>
@@ -382,7 +382,7 @@
       <workItem from="1416089037108" duration="5914000" />
       <workItem from="1416112626260" duration="1131000" />
       <workItem from="1416113762941" duration="17887000" />
-      <workItem from="1416133380401" duration="75000" />
+      <workItem from="1416133380401" duration="294000" />
     </task>
     <task id="LOCAL-00001" summary="Added the current position on the map script">
       <created>1416089048611</created>
@@ -732,11 +732,17 @@
       <option name="project" value="LOCAL" />
       <updated>1416133434163</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="Changed width on info view">
+      <created>1416133468261</created>
+      <option name="number" value="00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1416133468261</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25572000" />
+    <option name="totallyTimeSpent" value="25791000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -818,7 +824,8 @@
     <MESSAGE value="For loops suck in js" />
     <MESSAGE value="Fixed heading on info view" />
     <MESSAGE value="Changed header size on info view" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed header size on info view" />
+    <MESSAGE value="Changed width on info view" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed width on info view" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -914,8 +921,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/curLoc.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6686217" vertical-offset="1397" max-vertical-offset="3451">
-          <caret line="111" column="29" selection-start-line="111" selection-start-column="29" selection-end-line="111" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.41935483" vertical-offset="1397" max-vertical-offset="3468">
+          <caret line="101" column="16" selection-start-line="101" selection-start-column="16" selection-end-line="101" selection-end-column="16" />
           <folding>
             <element signature="e#0#43#0" expanded="false" />
           </folding>
