@@ -39,12 +39,11 @@ function setAllMap(map) {
                 xmlhttp.send();
             }
         //for events
-        /*
             if (tags[0] == true || tags[1] == true || tags[2] == true) {
                 //send in the time
 
                 var xmlhttp = new XMLHttpRequest();
-                var url = 'http://citykit.ca/events';
+                var url = 'http://citykit.ca/events/'+time;
                 var stringData = '';
                 xmlhttp.onreadystatechange = function () {
                     if (xmlhttp.readyState == 4) {
@@ -55,7 +54,7 @@ function setAllMap(map) {
                 }
                 xmlhttp.open('GET', url, true);
                 xmlhttp.send();
-        }*/
+        }
     }
 
     //event listeners for button toggles
@@ -184,7 +183,7 @@ function eventGeoListener(eventMarker, info, objects, i){
                 content: desc,
                 maxWidth: 200
             });
-            console.log(info[i]);
+            //onsole.log(info[i]);
 
             //adds each of the markers to the screen
             google.maps.event.addListener(promo[i], 'click', function() {
