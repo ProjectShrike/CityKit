@@ -6,7 +6,7 @@
 // Note: This example requires that you consent to location sharing when
 // prompted by your browser. If you see a blank space instead of the map, this
 // is probably because you have denied permission for location sharing.
-
+var geocoder = new google.maps.Geocoder();
 var map;
 var radius = 2; //default radius for PoV around the map in km
 var zoomVal = 13;
@@ -63,63 +63,64 @@ function handleEvents (results) {
 
 //gets the data from subscribed businesses
 function handlePromos (objects) {
-    console.log(objects[2].name);
+    console.log(objects[0].name);
     var promo = new Array (objects.length);
     var info = new Array (objects.length);
-    this.penis = 0;
-    while (this.penis < objects.length) {
-        var geocoder = new google.maps.Geocoder();
-        console.log(this.penis);
-        geocoder.geocode( { 'address': objects[penis].location}, function(results, status) {
-            if (status == google.maps.GeocoderStatus.OK) {
-                promo[this.penis] = new google.maps.Marker({
-                    map:map,
-                    position: results[0].geometry.position,
-                    //title: objects[i].name,
-                    animation: google.maps.Animation.DROP
-                    //icon = objects.image
-                });
-                console.log(this.penis);
-                var url = '';
-                var phone = '';
-                /*
-                //if (objects[i].path != '')
-                    url = '<b>Website: </b><a href ="'+
-                    objects[i].path+'">'
-                    +objects[i].path+'</a>';
-                //if (objects[i].phone != '')
-                    phone = '<b>Phone: </b>'+objects[i].phone;
+    for (var i = 0; i < objects.length; i++) {
+        geoListener(objects, i);
 
-                var desc = '<div id="content">'+
-                    '<h1 id="firstHeading" class="firstHeading">objects[i].name</h1>'+
-                    '<div id="contact">'+
-                    url+
-                    '<br>'+
-                    phone+
-                    '</div>'+
-                    '<div id="bodyContent">'+
-                    '<p>'+
-                    objects[i].description+
-                    '</p>'+
-                    '</div>'+
-                    '</div>';
-
-                //adds the information provided by the business
-                info[i] = new google.maps.InfoWindow({
-                    content: desc,
-                    maxWidth: 300
-                });
-                //adds each of the markers to the screen
-                google.maps.event.addListener(promo[i], 'click', function() {
-                    info[i].open(map,promo[i]);
-                });
-                 */
-            } else {
-                alert('Geocode was not successful for the following reason: ' + status);
-            }
-        });
-        this.penis++;
     }
+}
+
+function geoListener(objects, i){
+    geocoder.geocode( { 'address': objects[i].location}, function(results, status) {
+        if (status == google.maps.GeocoderStatus.OK) {
+            promo[i] = new google.maps.Marker({
+                map:map,
+                position: results[0].geometry.position,
+                title: objects[0].name,
+                animation: google.maps.Animation.DROP
+                //icon = objects.image
+            });
+
+            var url = '';
+            var phone = '';
+
+            //if (objects[i].path != '')
+            url = '<b>Website: </b><a href ="'+
+            objects[i].path+'">'
+            +objects[i].path+'</a>';
+            //if (objects[i].phone != '')
+            phone = '<b>Phone: </b>'+objects[i].phone;
+
+            var desc = '<div id="content">'+
+                '<h1 id="firstHeading" class="firstHeading">objects[i].name</h1>'+
+                '<div id="contact">'+
+                url+
+                '<br>'+
+                phone+
+                '</div>'+
+                '<div id="bodyContent">'+
+                '<p>'+
+                objects[i].description+
+                '</p>'+
+                '</div>'+
+                '</div>';
+
+            //adds the information provided by the business
+            info[i] = new google.maps.InfoWindow({
+                content: desc,
+                maxWidth: 300
+            });
+
+            //adds each of the markers to the screen
+            google.maps.event.addListener(promo[i], 'click', function() {
+                info[i].open(map,promo[i]);
+            });
+        } else {
+            alert('Geocode was not successful for the following reason: ' + status);
+        }
+    });
 }
 
 function initialize() {
@@ -179,6 +180,7 @@ function initialize() {
 
     xmlhttp.open('GET', url, true);
     xmlhttp.send();
+    console.log('8====D');
 
 
 }
