@@ -63,7 +63,6 @@ function handleEvents (results) {
 
 //gets the data from subscribed businesses
 function handlePromos (objects) {
-    console.log(objects[0].name);
     var promo = new Array (objects.length);
     var info = new Array (objects.length);
     for (var i = 0; i < objects.length; i++) {
@@ -73,12 +72,12 @@ function handlePromos (objects) {
 }
 
 function geoListener(promo, info, objects, i){
-    geocoder.geocode( { 'address': objects[i].location}, function(results, status) {
+    geocoder.geocode( { 'address': objects[i].address}, function(results, status) {
         if (status == google.maps.GeocoderStatus.OK) {
             promo[i] = new google.maps.Marker({
                 map:map,
                 position: results[0].geometry.position,
-                title: objects[0].name,
+                title: objects[i].name,
                 animation: google.maps.Animation.DROP
                 //icon = objects.image
             });
@@ -86,11 +85,11 @@ function geoListener(promo, info, objects, i){
             var url = '';
             var phone = '';
 
-            //if (objects[i].path != '')
+            if (objects[i].path != '')
             url = '<b>Website: </b><a href ="'+
             objects[i].path+'">'
             +objects[i].path+'</a>';
-            //if (objects[i].phone != '')
+            if (objects[i].phone != '')
             phone = '<b>Phone: </b>'+objects[i].phone;
 
             var desc = '<div id="content">'+
