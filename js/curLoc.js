@@ -69,6 +69,7 @@ function handlePromos (objects) {
     var penis = 0;
     while (penis < objects.length) {
         var geocoder = new google.maps.Geocoder();
+        console.log(penis);
         geocoder.geocode( { 'address': objects[penis].location}, function(results, status) {
             if (status == google.maps.GeocoderStatus.OK) {
                 promo[penis] = new google.maps.Marker({
@@ -178,7 +179,6 @@ function initialize() {
 
     xmlhttp.open('GET', url, true);
     xmlhttp.send();
-    console.log('8====D');
 
 
 }
