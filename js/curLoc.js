@@ -8,12 +8,17 @@
 // is probably because you have denied permission for location sharing.
 
 var map;
-/*var radius = 2; //default radius for PoV around the map
-var zoomVal = Math.log(6371/(radius*1.5))/Math.log(2); //converts the radius into the zoom value
-*/
+var radius = 2; //default radius for PoV around the map
+var zoomVal = 13;
 function initialize() {
+    if (radius < 1)
+        zoomVal: 15;
+    else if (radius < 4)
+        zoomVal = 14;
+    else
+        zoomVal = 13;
     var mapOptions = {
-        zoom: 14
+        zoom: zoomVal
     };
     map = new google.maps.Map(document.getElementById('map-canvas'),
         mapOptions);
