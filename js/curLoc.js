@@ -20,7 +20,7 @@ function setAllMap(map) {
     function toggleListener () {
         //clear the screen
         setAllMap (null);
-        markers[];
+        markers = [];
 
         var marker = new google.maps.Marker({
             map:map,
@@ -292,8 +292,8 @@ function initialize() {
             curLocation = new google.maps.LatLng(position.coords.latitude,
                 position.coords.longitude);
 
-
-            map.setCenter(currentLocation);
+            console.log("lol");
+            map.setCenter(curLocation);
         }, function() {
             handleNoGeolocation(true);
         });
