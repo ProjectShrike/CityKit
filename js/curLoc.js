@@ -162,7 +162,9 @@ function initialize() {
         //handlePromos(results);
         console.log(result);
     }
-    console.log("8====D");
+    xmlhttp.open('GET', url, true);
+    xmlhttp.send()
+    console.log('8====D');
 
 
 }
