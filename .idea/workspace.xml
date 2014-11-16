@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ada089d2-a466-44e8-b784-226c608c9f89" name="Default" comment="Testing path of objects">
+    <list default="true" id="ada089d2-a466-44e8-b784-226c608c9f89" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/curLoc.js" afterPath="$PROJECT_DIR$/js/curLoc.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -31,8 +31,8 @@
       <file leaf-file-name="curLoc.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/curLoc.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3547826" vertical-offset="867" max-vertical-offset="3502">
-              <caret line="65" column="25" selection-start-line="65" selection-start-column="25" selection-end-line="65" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.3547826" vertical-offset="1122" max-vertical-offset="3502">
+              <caret line="80" column="31" selection-start-line="80" selection-start-column="31" selection-end-line="80" selection-end-column="31" />
               <folding>
                 <element signature="e#0#43#0" expanded="false" />
               </folding>
@@ -495,7 +495,7 @@
       <workItem from="1416088507424" duration="519000" />
       <workItem from="1416089037108" duration="5914000" />
       <workItem from="1416112626260" duration="1131000" />
-      <workItem from="1416113762941" duration="15002000" />
+      <workItem from="1416113762941" duration="15140000" />
     </task>
     <task id="LOCAL-00001" summary="Added the current position on the map script">
       <created>1416089048611</created>
@@ -731,11 +731,17 @@
       <option name="project" value="LOCAL" />
       <updated>1416130415555</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Testing path of objects">
+      <created>1416130489755</created>
+      <option name="number" value="00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1416130489755</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22612000" />
+    <option name="totallyTimeSpent" value="22750000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -892,8 +898,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/curLoc.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3547826" vertical-offset="867" max-vertical-offset="3502">
-          <caret line="65" column="25" selection-start-line="65" selection-start-column="25" selection-end-line="65" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.3547826" vertical-offset="1122" max-vertical-offset="3502">
+          <caret line="80" column="31" selection-start-line="80" selection-start-column="31" selection-end-line="80" selection-end-column="31" />
           <folding>
             <element signature="e#0#43#0" expanded="false" />
           </folding>

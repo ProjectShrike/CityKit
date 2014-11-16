@@ -74,14 +74,14 @@ function handlePromos (objects) {
                 promo[i] = new google.maps.Marker({
                     map:map,
                     position: results[0].geometry.position,
-                    title: objects[i].name,
+                    //title: objects[i].name,
                     animation: google.maps.Animation.DROP
                     //icon = objects.image
                 });
-
+                console.log(i);
                 var url = '';
                 var phone = '';
-
+                /*
                 //if (objects[i].path != '')
                     url = '<b>Website: </b><a href ="'+
                     objects[i].path+'">'
@@ -108,11 +108,11 @@ function handlePromos (objects) {
                     content: desc,
                     maxWidth: 300
                 });
-
                 //adds each of the markers to the screen
                 google.maps.event.addListener(promo[i], 'click', function() {
                     info[i].open(map,promo[i]);
                 });
+                 */
             } else {
                 alert('Geocode was not successful for the following reason: ' + status);
             }
