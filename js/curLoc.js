@@ -135,6 +135,7 @@ function handleEvents (objects) {
     var eventMarker = new Array (objects.length);
     var info = new Array (objects.length);
     for (var i = 0; i < objects.length; i++) {
+        console.log(object[i]);
         eventGeoListener(eventMarker, info, objects, i);
     }
 }

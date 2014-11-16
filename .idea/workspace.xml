@@ -2,13 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ada089d2-a466-44e8-b784-226c608c9f89" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/MapMarkers/10.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/MapMarkers/11.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/MapMarkers/5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/MapMarkers/6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/MapMarkers/7.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/MapMarkers/8.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/MapMarkers/9.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/curLoc.js" afterPath="$PROJECT_DIR$/js/curLoc.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -45,23 +38,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="curLoc.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="curLoc.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/curLoc.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="5508">
-              <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.53968257" vertical-offset="1989" max-vertical-offset="5525">
+              <caret line="137" column="31" selection-start-line="137" selection-start-column="31" selection-end-line="137" selection-end-column="31" />
               <folding>
-                <marker date="1416151390530" expanded="true" signature="5521:5548" placeholder="..." />
-                <marker date="1416151390530" expanded="true" signature="8024:8051" placeholder="..." />
+                <marker date="1416151653551" expanded="true" signature="5553:5580" placeholder="..." />
+                <marker date="1416151653551" expanded="true" signature="8056:8083" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="numericdata.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="numericdata.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/numericdata.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.28099173" vertical-offset="0" max-vertical-offset="605">
+            <state vertical-scroll-proportion="-6.8" vertical-offset="0" max-vertical-offset="374">
               <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
               <folding />
             </state>
@@ -575,7 +568,7 @@
       <workItem from="1416112626260" duration="1131000" />
       <workItem from="1416113762941" duration="17887000" />
       <workItem from="1416133380401" duration="1829000" />
-      <workItem from="1416135216936" duration="14985000" />
+      <workItem from="1416135216936" duration="15235000" />
     </task>
     <task id="LOCAL-00001" summary="Added the current position on the map script">
       <created>1416089048611</created>
@@ -1105,11 +1098,23 @@
       <option name="project" value="LOCAL" />
       <updated>1416149066096</updated>
     </task>
-    <option name="localTasksCounter" value="89" />
+    <task id="LOCAL-00089" summary="Fixed double cursor bus">
+      <created>1416151408972</created>
+      <option name="number" value="00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1416151408972</updated>
+    </task>
+    <task id="LOCAL-00090" summary="Added numeric data conversion for categories">
+      <created>1416151447061</created>
+      <option name="number" value="00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1416151447061</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42311000" />
+    <option name="totallyTimeSpent" value="42561000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1201,7 +1206,8 @@
     <MESSAGE value="Let's not talk about it" />
     <MESSAGE value="Resized the images" />
     <MESSAGE value="Fixed double cursor bus" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed double cursor bus" />
+    <MESSAGE value="Added numeric data conversion for categories" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added numeric data conversion for categories" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1213,8 +1219,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3434">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1416151390530" expanded="true" signature="5521:5548" placeholder="..." />
-            <marker date="1416151390530" expanded="true" signature="8024:8051" placeholder="..." />
+            <marker date="1416151653551" expanded="true" signature="5553:5580" placeholder="..." />
+            <marker date="1416151653551" expanded="true" signature="8056:8083" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1232,8 +1238,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3451">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1416151390530" expanded="true" signature="5521:5548" placeholder="..." />
-            <marker date="1416151390530" expanded="true" signature="8024:8051" placeholder="..." />
+            <marker date="1416151653551" expanded="true" signature="5553:5580" placeholder="..." />
+            <marker date="1416151653551" expanded="true" signature="8056:8083" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1251,8 +1257,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="1173">
           <caret line="33" column="15" selection-start-line="28" selection-start-column="15" selection-end-line="33" selection-end-column="15" />
           <folding>
-            <marker date="1416151390530" expanded="true" signature="5521:5548" placeholder="..." />
-            <marker date="1416151390530" expanded="true" signature="8024:8051" placeholder="..." />
+            <marker date="1416151653551" expanded="true" signature="5553:5580" placeholder="..." />
+            <marker date="1416151653551" expanded="true" signature="8056:8083" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1270,8 +1276,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1156">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1416151390530" expanded="true" signature="5521:5548" placeholder="..." />
-            <marker date="1416151390530" expanded="true" signature="8024:8051" placeholder="..." />
+            <marker date="1416151653551" expanded="true" signature="5553:5580" placeholder="..." />
+            <marker date="1416151653551" expanded="true" signature="8056:8083" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1289,8 +1295,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1122">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1416151390530" expanded="true" signature="5521:5548" placeholder="..." />
-            <marker date="1416151390530" expanded="true" signature="8024:8051" placeholder="..." />
+            <marker date="1416151653551" expanded="true" signature="5553:5580" placeholder="..." />
+            <marker date="1416151653551" expanded="true" signature="8056:8083" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1318,6 +1324,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/numericdata.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.8" vertical-offset="0" max-vertical-offset="374">
+          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.92" vertical-offset="0" max-vertical-offset="476">
@@ -1328,20 +1342,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/curLoc.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="5508">
-          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.53968257" vertical-offset="1989" max-vertical-offset="5525">
+          <caret line="137" column="31" selection-start-line="137" selection-start-column="31" selection-end-line="137" selection-end-column="31" />
           <folding>
-            <marker date="1416151390530" expanded="true" signature="5521:5548" placeholder="..." />
-            <marker date="1416151390530" expanded="true" signature="8024:8051" placeholder="..." />
+            <marker date="1416151653551" expanded="true" signature="5553:5580" placeholder="..." />
+            <marker date="1416151653551" expanded="true" signature="8056:8083" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/numericdata.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28099173" vertical-offset="0" max-vertical-offset="605">
-          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
