@@ -77,9 +77,9 @@ function geoListener(promo, info, objects, i){
         if (status == google.maps.GeocoderStatus.OK) {
             promo[i] = new google.maps.Marker({
                 map: map,
-                position: new google.maps.LatLng(60, 105),
-                title: objects[i].name,
-                animation: google.maps.Animation.DROP
+                position: new google.maps.LatLng(60, 105)
+                //title: objects[i].name,
+                //animation: google.maps.Animation.DROP
                 //icon = objects.image
             });
             console.log(promo[i]);
