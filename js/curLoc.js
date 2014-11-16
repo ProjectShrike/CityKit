@@ -291,7 +291,11 @@ function initialize() {
             curLocation = new google.maps.LatLng(position.coords.latitude,
                 position.coords.longitude);
 
-            console.log("lol");
+            var marker = new google.maps.Marker({
+                map:map,
+                position: curLocation,
+                animation: google.maps.Animation.BOUNCE
+            });
             map.setCenter(curLocation);
         }, function() {
             handleNoGeolocation(true);
