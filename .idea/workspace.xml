@@ -41,11 +41,11 @@
       <file leaf-file-name="curLoc.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/curLoc.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4938838" vertical-offset="306" max-vertical-offset="5491">
-              <caret line="37" column="17" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.44189602" vertical-offset="306" max-vertical-offset="5559">
+              <caret line="35" column="36" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
               <folding>
-                <marker date="1416153785972" expanded="true" signature="5548:5575" placeholder="..." />
-                <marker date="1416153785972" expanded="true" signature="8057:8084" placeholder="..." />
+                <marker date="1416153963009" expanded="true" signature="5634:5661" placeholder="..." />
+                <marker date="1416153963009" expanded="true" signature="8143:8170" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -568,7 +568,7 @@
       <workItem from="1416112626260" duration="1131000" />
       <workItem from="1416113762941" duration="17887000" />
       <workItem from="1416133380401" duration="1829000" />
-      <workItem from="1416135216936" duration="17366000" />
+      <workItem from="1416135216936" duration="17543000" />
     </task>
     <task id="LOCAL-00001" summary="Added the current position on the map script">
       <created>1416089048611</created>
@@ -1164,11 +1164,17 @@
       <option name="project" value="LOCAL" />
       <updated>1416153714810</updated>
     </task>
-    <option name="localTasksCounter" value="100" />
+    <task id="LOCAL-00100" summary="Fixed errors">
+      <created>1416153791149</created>
+      <option name="number" value="00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1416153791149</updated>
+    </task>
+    <option name="localTasksCounter" value="101" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44692000" />
+    <option name="totallyTimeSpent" value="44869000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1278,8 +1284,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3434">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1416153785972" expanded="true" signature="5548:5575" placeholder="..." />
-            <marker date="1416153785972" expanded="true" signature="8057:8084" placeholder="..." />
+            <marker date="1416153963009" expanded="true" signature="5634:5661" placeholder="..." />
+            <marker date="1416153963009" expanded="true" signature="8143:8170" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1297,8 +1303,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3451">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1416153785972" expanded="true" signature="5548:5575" placeholder="..." />
-            <marker date="1416153785972" expanded="true" signature="8057:8084" placeholder="..." />
+            <marker date="1416153963009" expanded="true" signature="5634:5661" placeholder="..." />
+            <marker date="1416153963009" expanded="true" signature="8143:8170" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1316,8 +1322,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="1173">
           <caret line="33" column="15" selection-start-line="28" selection-start-column="15" selection-end-line="33" selection-end-column="15" />
           <folding>
-            <marker date="1416153785972" expanded="true" signature="5548:5575" placeholder="..." />
-            <marker date="1416153785972" expanded="true" signature="8057:8084" placeholder="..." />
+            <marker date="1416153963009" expanded="true" signature="5634:5661" placeholder="..." />
+            <marker date="1416153963009" expanded="true" signature="8143:8170" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1335,8 +1341,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1156">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1416153785972" expanded="true" signature="5548:5575" placeholder="..." />
-            <marker date="1416153785972" expanded="true" signature="8057:8084" placeholder="..." />
+            <marker date="1416153963009" expanded="true" signature="5634:5661" placeholder="..." />
+            <marker date="1416153963009" expanded="true" signature="8143:8170" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1354,8 +1360,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1122">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1416153785972" expanded="true" signature="5548:5575" placeholder="..." />
-            <marker date="1416153785972" expanded="true" signature="8057:8084" placeholder="..." />
+            <marker date="1416153963009" expanded="true" signature="5634:5661" placeholder="..." />
+            <marker date="1416153963009" expanded="true" signature="8143:8170" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1401,11 +1407,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/curLoc.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4938838" vertical-offset="306" max-vertical-offset="5491">
-          <caret line="37" column="17" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.44189602" vertical-offset="306" max-vertical-offset="5559">
+          <caret line="35" column="36" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
           <folding>
-            <marker date="1416153785972" expanded="true" signature="5548:5575" placeholder="..." />
-            <marker date="1416153785972" expanded="true" signature="8057:8084" placeholder="..." />
+            <marker date="1416153963009" expanded="true" signature="5634:5661" placeholder="..." />
+            <marker date="1416153963009" expanded="true" signature="8143:8170" placeholder="..." />
           </folding>
         </state>
       </provider>

@@ -20,6 +20,7 @@ function setAllMap(map) {
     function toggleListener () {
         //clear the screen
         setAllMap (null);
+        var flag = false;
         markers = [];
         console.log(tags);
         //if either food or stores are selected
@@ -32,6 +33,7 @@ function setAllMap(map) {
                 xmlhttp.onreadystatechange = function () {
                     if (xmlhttp.readyState == 4) {
                         handlePromos(JSON.parse(xmlhttp.responseText).array);
+                        flag = true;
                         //console.log(JSON.parse(xmlhttp.responseText));
                     }
 
@@ -40,6 +42,8 @@ function setAllMap(map) {
                 xmlhttp.send();
             }
         //for events
+        while(!flag){}
+
          if (tags[0] == true || tags[1] == true || tags[2] == true) {
                 //send in the time
 
@@ -49,7 +53,7 @@ function setAllMap(map) {
                 xmlhttp.onreadystatechange = function () {
                     if (exmlhttp.readyState == 4) {
                         //console.log(JSON.parse(xmlhttp.responseText));
-                        handleEvents(JSON.parse(exmlhttp.responseText).array);
+                        handleEvents(JSON.parse(xmlhttp.responseText).array);
                     }
 
                 }
