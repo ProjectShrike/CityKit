@@ -13,7 +13,7 @@ var zoomVal = Math.log(6371/(radius*1.5))/Math.log(2); //converts the radius int
 
 function initialize() {
     var mapOptions = {
-        zoom: zoomVal
+        zoom: 17
     };
     map = new google.maps.Map(document.getElementById('map-canvas'),
         mapOptions);
