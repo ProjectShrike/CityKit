@@ -48,7 +48,7 @@ function setAllMap(map) {
                 xmlhttp.onreadystatechange = function () {
                     if (xmlhttp.readyState == 4) {
                         handleEvents(JSON.parse(xmlhttp.responseText).array);
-                        //console.log(JSON.parse(xmlhttp.responseText));
+                        console.log(JSON.parse(xmlhttp.responseText));
                     }
 
                 }
