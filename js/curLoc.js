@@ -9,6 +9,7 @@
     var zoomVal = 13;
     var curLocation;
     var markers = [];
+    var rootPath = "http://citykit.wojtechnology.com/";
 
 function get_time() {
     time = parseInt(document.getElementById("time_select").value);
@@ -28,11 +29,11 @@ function setAllMap(map) {
         markers = [];
         console.log(tags);
         //if either food or stores are selected
-        if (tags[3] == true || tags[4] == true) {
+        /* if (tags[3] == true || tags[4] == true) {
             //send in the radius
 
                 var xmlhttp = new XMLHttpRequest();
-                var url = 'http://citykit.ca/promotions';
+                var url = rootPath + 'promotions';
                 var stringData = '';
                 xmlhttp.onreadystatechange = function () {
                     if (xmlhttp.readyState == 4) {
@@ -50,7 +51,7 @@ function setAllMap(map) {
                 //send in the time
 
                 var exmlhttp = new XMLHttpRequest();
-                var url = 'http://citykit.ca/events/'+time;
+                var url = rootPath + 'events/' + time;
                 var stringData = '';
                 exmlhttp.onreadystatechange = function () {
                     if (exmlhttp.readyState == 4) {
@@ -61,13 +62,13 @@ function setAllMap(map) {
                 }
                 exmlhttp.open('GET', url, true);
                 exmlhttp.send();
-        }
+        }*/
 
         if (tags[5] == true/* || tags[6] == true || tags[7] == true || tags[8] == true || tags[9] == true || tags[10] == true || tags[11] == true*/) {
             //send in the time
 
             var sxmlhttp = new XMLHttpRequest();
-            var url = 'http://citykit.ca/landmarks/';
+            var url = rootPath + 'landmarks';
             var stringData = '';
             sxmlhttp.onreadystatechange = function () {
                 if (sxmlhttp.readyState == 4) {
@@ -259,7 +260,7 @@ function eventGeoListener(eventMarker, info, objects, i){
     geocoder.geocode( { 'address': objects[i].location}, function(results, status) {
         if (status == google.maps.GeocoderStatus.OK && tags[objects[i].category]) {
             var image = {
-                url: 'images/MapMarkers/'+objects[i].category+'.png',
+                url: '../images/MapMarkers/'+objects[i].category+'.png',
                 // This marker is 20 pixels wide by 32 pixels tall.
                 size: new google.maps.Size(33, 44),
                 // The origin for this image is 0,0.
@@ -325,7 +326,7 @@ function eventLandListener(landMarker, info, objects, i){
     geocoder.geocode( { 'address': objects[i].xCoordinate + ',' + objects[i].yCoordinate }, function(results, status) {
         if (status == google.maps.GeocoderStatus.OK && tags[5]) {
             var image = {
-                url: 'images/MapMarkers/5.png',
+                url: '../images/MapMarkers/5.png',
                 // This marker is 20 pixels wide by 32 pixels tall.
                 size: new google.maps.Size(33, 44),
                 // The origin for this image is 0,0.
@@ -377,7 +378,7 @@ function geoListener(promo, info, objects, i){
     geocoder.geocode( { 'address': objects[i].location}, function(results, status) {
         if (status == google.maps.GeocoderStatus.OK && tags[objects[i].category] == true) {
             var image = {
-                url: 'images/MapMarkers/'+objects[i].category+'.png',
+                url: '../images/MapMarkers/'+objects[i].category+'.png',
                 // This marker is 20 pixels wide by 32 pixels tall.
                 size: new google.maps.Size(33, 44),
                 // The origin for this image is 0,0.

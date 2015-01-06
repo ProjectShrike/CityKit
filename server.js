@@ -115,7 +115,7 @@ app.get("/landmarks", function(req, res){
 	});
 });
 
-app.get("/promotions", function(req, res){
+/*app.get("/promotions", function(req, res){
 	var sendData = [];
 	connection.query('SELECT * FROM promotions_table', function(err, rows, fields){
 		if(err) throw err;
@@ -161,7 +161,7 @@ app.get("/events/:shiftTime", function(req, res){
 		res.setHeader('Content-Type', 'application/json');
 		res.end('{"array": ' + JSON.stringify(sendData) + '}');
 	});
-});
+});*/
 
 /* 
  * JS functions for converting between UTM and geographic coordinates and
