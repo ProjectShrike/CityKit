@@ -16,10 +16,10 @@ City Kit was developed at the 24 hour Startup hackathon hosted by the City of Ki
 * Angad Kashyap
 
 <strong>App:</strong>
-* [Priyesh Patel](https://priyesh.cf)
+* [Priyesh Patel](http://priyesh.cf)
 * Umesh Khanna
 
 ####Marketing
 * Syed Haque
-* [Bo Peng](https://bo-peng.net)
+* [Bo Peng](http://bo-peng.net)
 * Mason Kuang
