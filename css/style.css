@@ -7,7 +7,7 @@
 
 @font-face {
 	font-family: Gotham;
-	src: url("fonts/gotham-rounded-medium.otf");
+	src: url("../fonts/gotham-rounded-medium.otf");
 }
 
 body {
@@ -22,7 +22,7 @@ body {
 	height: 100%;
 	background: radial-gradient(ellipse closest-side,
 	rgba(0,0,0,0), rgba(0,0,0,0.4)),
-	url("images/mainbg.jpg") no-repeat center bottom fixed;
+	url("../images/mainbg.jpg") no-repeat center bottom fixed;
 	background-size: cover;
 	box-shadow: inset 0 0 50px rgba(0, 0, 0, 1);
 
