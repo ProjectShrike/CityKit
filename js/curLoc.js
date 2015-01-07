@@ -361,7 +361,6 @@ function initialize() {
         // Browser doesn't support Geolocation
         handleNoGeolocation(false);
     }
-    toggleListener();
 }
 
 function handleNoGeolocation(errorFlag) {
