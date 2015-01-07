@@ -269,7 +269,7 @@ $("#playgrounds").click(function() {
 // is probably because you have denied permission for location sharing.
 
 //gets an array of events shows them on the map using markers
-
+/*
 function geoListener(promo, info, objects, i){
     geocoder.geocode( { 'address': objects[i].location}, function(results, status) {
         if (status == google.maps.GeocoderStatus.OK && tags[objects[i].category] == true) {
@@ -324,7 +324,7 @@ function geoListener(promo, info, objects, i){
         }
     });
 }
-
+*/
 function initialize() {
     //handles the different radius values
     if (radius < 1.5)
