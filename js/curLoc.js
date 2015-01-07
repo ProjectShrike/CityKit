@@ -41,159 +41,162 @@ function setAllMap(map) {
     }
 }
 
-    //gets called after each call event
-    function toggleListener () {
-        //clear the screen
-        setAllMap (null);
-        markers = [];
-        console.log(tags);
-        //if either food or stores are selected
-        /* if (tags[3] == true || tags[4] == true) {
-            //send in the radius
 
-                var xmlhttp = new XMLHttpRequest();
-                var url = rootPath + 'promotions';
-                var stringData = '';
-                xmlhttp.onreadystatechange = function () {
-                    if (xmlhttp.readyState == 4) {
-                        handlePromos(JSON.parse(xmlhttp.responseText).array);
-                        //console.log(JSON.parse(xmlhttp.responseText));
-                    }
 
-                }
-                xmlhttp.open('GET', url, true);
-                xmlhttp.send();
-            }
-        //for events
+//     //gets called after each call event
+//     function toggleListener () {
+//         //clear the screen
+//         setAllMap (null);
+//         markers = [];
+//         console.log(tags);
+//         //if either food or stores are selected
+//         /* if (tags[3] == true || tags[4] == true) {
+//             //send in the radius
 
-         if (tags[0] == true || tags[1] == true || tags[2] == true) {
-                //send in the time
+//                 var xmlhttp = new XMLHttpRequest();
+//                 var url = rootPath + 'promotions';
+//                 var stringData = '';
+//                 xmlhttp.onreadystatechange = function () {
+//                     if (xmlhttp.readyState == 4) {
+//                         handlePromos(JSON.parse(xmlhttp.responseText).array);
+//                         //console.log(JSON.parse(xmlhttp.responseText));
+//                     }
 
-                var exmlhttp = new XMLHttpRequest();
-                var url = rootPath + 'events/' + time;
-                var stringData = '';
-                exmlhttp.onreadystatechange = function () {
-                    if (exmlhttp.readyState == 4) {
-                        //console.log(JSON.parse(xmlhttp.responseText));
-                        handleEvents(JSON.parse(exmlhttp.responseText).array);
-                    }
+//                 }
+//                 xmlhttp.open('GET', url, true);
+//                 xmlhttp.send();
+//             }
+//         //for events
 
-                }
-                exmlhttp.open('GET', url, true);
-                exmlhttp.send();
-        }*/
+//          if (tags[0] == true || tags[1] == true || tags[2] == true) {
+//                 //send in the time
 
-        if (tags[5] == true/* || tags[6] == true || tags[7] == true || tags[8] == true || tags[9] == true || tags[10] == true || tags[11] == true*/) {
-            //send in the time
+//                 var exmlhttp = new XMLHttpRequest();
+//                 var url = rootPath + 'events/' + time;
+//                 var stringData = '';
+//                 exmlhttp.onreadystatechange = function () {
+//                     if (exmlhttp.readyState == 4) {
+//                         //console.log(JSON.parse(xmlhttp.responseText));
+//                         handleEvents(JSON.parse(exmlhttp.responseText).array);
+//                     }
 
-            var sxmlhttp = new XMLHttpRequest();
-            var url = rootPath + 'landmarks';
-            var stringData = '';
-            sxmlhttp.onreadystatechange = function () {
-                if (sxmlhttp.readyState == 4) {
-                    //console.log(JSON.parse(xmlhttp.responseText));
-                    handleLandmarks(JSON.parse(sxmlhttp.responseText).array);
-                }
+//                 }
+//                 exmlhttp.open('GET', url, true);
+//                 exmlhttp.send();
+//         }*/
 
-            }
-            sxmlhttp.open('GET', url, true);
-            sxmlhttp.send();
-        }
-    }
+//         if (tags[5] == true/* || tags[6] == true || tags[7] == true || tags[8] == true || tags[9] == true || tags[10] == true || tags[11] == true*/) {
+//             //send in the time
 
-    //event listeners for button toggles
+//             var sxmlhttp = new XMLHttpRequest();
+//             var url = rootPath + 'landmarks';
+//             var stringData = '';
+//             sxmlhttp.onreadystatechange = function () {
+//                 if (sxmlhttp.readyState == 4) {
+//                     //console.log(JSON.parse(xmlhttp.responseText));
+//                     handleLandmarks(JSON.parse(sxmlhttp.responseText).array);
+//                 }
 
-var Options = ["events", "sports", "concerts", "stores", "food", "sports_fields", "museums", "comm_center", "pub_art", "dog_parks", "poi", "playgrounds"];
-$("#events").click(function() {
-    // when activated
-    if ($("#events").css("background-color") == "rgb(204, 204, 204)") {
-        $("#events").css("background-color", "rgb(255, 255, 255)");
-        tags[0] = false;
-    }
-    else {
-        $("#events").css("background-color", "rgb(204, 204, 204)");
-        tags[0] = true;
-    }
-    toggleListener();
-});
+//             }
+//             sxmlhttp.open('GET', url, true);
+//             sxmlhttp.send();
+//         }
+//     }
 
-$("#sports").click(function() {
-    // when activated
-    if ($("#sports").css("background-color") == "rgb(204, 204, 204)") {
-        $("#sports").css("background-color", "rgb(255, 255, 255)");
-        tags[1] = false;
-    }
-    else {
-        $("#sports").css("background-color", "rgb(204, 204, 204)");
-        tags[1] = true;
-    }
-    toggleListener();
-});
+//     //event listeners for button toggles
 
-$("#concerts").click(function() {
-    // when activated
-    if ($("#concerts").css("background-color") == "rgb(204, 204, 204)") {
-        $("#concerts").css("background-color", "rgb(255, 255, 255)");
-        tags[2] = false;
-    }
-    else {
-        $("#concerts").css("background-color", "rgb(204, 204, 204)");
-        tags[2] = true;
-    }
-    toggleListener();
-});
+// var Options = ["events", "sports", "concerts", "stores", "food", "sports_fields", "museums", "comm_center", "pub_art", "dog_parks", "poi", "playgrounds"];
+// $("#events").click(function() {
+//     // when activated
+//     if ($("#events").css("background-color") == "rgb(204, 204, 204)") {
+//         $("#events").css("background-color", "rgb(255, 255, 255)");
+//         tags[0] = false;
+//     }
+//     else {
+//         $("#events").css("background-color", "rgb(204, 204, 204)");
+//         tags[0] = true;
+//     }
+//     toggleListener();
+// });
 
-$("#stores").click(function() {
-    // when activated
-    if ($("#stores").css("background-color") == "rgb(204, 204, 204)") {
-        $("#stores").css("background-color", "rgb(255, 255, 255)");
-        tags[3] = false;
-    }
-    else {
-        $("#stores").css("background-color", "rgb(204, 204, 204)");
-        tags[3] = true;
-    }
-    toggleListener();
-});
+// $("#sports").click(function() {
+//     // when activated
+//     if ($("#sports").css("background-color") == "rgb(204, 204, 204)") {
+//         $("#sports").css("background-color", "rgb(255, 255, 255)");
+//         tags[1] = false;
+//     }
+//     else {
+//         $("#sports").css("background-color", "rgb(204, 204, 204)");
+//         tags[1] = true;
+//     }
+//     toggleListener();
+// });
 
-$("#food").click(function() {
-    // when activated
-    if ($("#food").css("background-color") == "rgb(204, 204, 204)") {
-        $("#food").css("background-color", "rgb(255, 255, 255)");
-        tags[4] = false;
-    }
-    else {
-        $("#food").css("background-color", "rgb(204, 204, 204)");
-        tags[4] = true;
-    }
-    toggleListener();
-});
+// $("#concerts").click(function() {
+//     // when activated
+//     if ($("#concerts").css("background-color") == "rgb(204, 204, 204)") {
+//         $("#concerts").css("background-color", "rgb(255, 255, 255)");
+//         tags[2] = false;
+//     }
+//     else {
+//         $("#concerts").css("background-color", "rgb(204, 204, 204)");
+//         tags[2] = true;
+//     }
+//     toggleListener();
+// });
 
-$("#sports_fields").click(function() {
-    // when activated
-    if ($("#sports_fields").css("background-color") == "rgb(204, 204, 204)") {
-        $("#sports_fields").css("background-color", "rgb(255, 255, 255)");
-        tags[11] = false;
-    }
-    else {
-        $("#sports_fields").css("background-color", "rgb(204, 204, 204)");
-        tags[11] = true;
-    }
-    toggleListener();
-});
+// $("#stores").click(function() {
+//     // when activated
+//     if ($("#stores").css("background-color") == "rgb(204, 204, 204)") {
+//         $("#stores").css("background-color", "rgb(255, 255, 255)");
+//         tags[3] = false;
+//     }
+//     else {
+//         $("#stores").css("background-color", "rgb(204, 204, 204)");
+//         tags[3] = true;
+//     }
+//     toggleListener();
+// });
 
-$("#museums").click(function() {
-    // when activated
-    if ($("#museums").css("background-color") == "rgb(204, 204, 204)") {
-        $("#museums").css("background-color", "rgb(255, 255, 255)");
-        tags[5] = false;
-    }
-    else {
-        $("#museums").css("background-color", "rgb(204, 204, 204)");
-        tags[5] = true;
-    }
-    toggleListener();
-});
+// $("#food").click(function() {
+//     // when activated
+//     if ($("#food").css("background-color") == "rgb(204, 204, 204)") {
+//         $("#food").css("background-color", "rgb(255, 255, 255)");
+//         tags[4] = false;
+//     }
+//     else {
+//         $("#food").css("background-color", "rgb(204, 204, 204)");
+//         tags[4] = true;
+//     }
+//     toggleListener();
+// });
+
+// $("#sports_fields").click(function() {
+//     // when activated
+//     if ($("#sports_fields").css("background-color") == "rgb(204, 204, 204)") {
+//         $("#sports_fields").css("background-color", "rgb(255, 255, 255)");
+//         tags[11] = false;
+//     }
+//     else {
+//         $("#sports_fields").css("background-color", "rgb(204, 204, 204)");
+//         tags[11] = true;
+//     }
+//     toggleListener();
+// });
+
+// $("#museums").click(function() {
+//     // when activated
+//     if ($("#museums").css("background-color") == "rgb(204, 204, 204)") {
+//         $("#museums").css("background-color", "rgb(255, 255, 255)");
+//         tags[5] = false;
+//     }
+//     else {
+//         $("#museums").css("background-color", "rgb(204, 204, 204)");
+//         tags[5] = true;
+//     }
+//     toggleListener();
+// });
+
 /*
 $("#comm_center").click(function() {
     // when activated
@@ -329,68 +332,6 @@ function eventGeoListener(eventMarker, info, objects, i){
             alert('Geocode was not successful for the following reason: ' + status);
         }
     });
-}
-
-//gets an array of landmarks shows them on the map using markers
-function handleLandmarks (objects) {
-    var landMarker = new Array (objects.length);
-    var info = new Array (objects.length);
-    for (var i = 0; i < objects.length; i++) {
-        //console.log(objects[i]);
-        eventLandListener(landMarker, info, objects, i);
-    }
-}
-
-function eventLandListener(landMarker, info, objects, i){
-    geocoder.geocode( { 'address': objects[i].xCoordinate + ',' + objects[i].yCoordinate }, function(results, status) {
-        if (status == google.maps.GeocoderStatus.OK && tags[5]) {
-            var image = {
-                url: '../images/MapMarkers/5.png',
-                // This marker is 20 pixels wide by 32 pixels tall.
-                size: new google.maps.Size(33, 44),
-                // The origin for this image is 0,0.
-                origin: new google.maps.Point(0,0),
-                // The anchor for this image is the base of the flagpole at 0,32.
-                anchor: new google.maps.Point(0, 32)
-            };
-            landMarker[i] = new google.maps.Marker({
-                map: map,
-                position: results[0].geometry.location,
-                animation: google.maps.Animation.DROP,
-                icon: image
-
-            });
-            markers.push(landMarker[i]);
-
-            var desc = '<div id="content" style="overflow: hidden !important">'+
-                '<h4 id="firstHeading" class="firstHeading">'+ objects[i].landmark+ '</h4>'+
-                '</div>';
-
-            //adds the information provided by the business
-            info[i] = new google.maps.InfoWindow({
-                content: desc,
-                maxWidth: 200
-            });
-            //onsole.log(info[i]);
-
-            //adds each of the markers to the screen
-            google.maps.event.addListener(landMarker[i], 'click', function() {
-                info[i].open(map,landMarker[i]);
-            });
-        } else {
-            alert('Geocode was not successful for the following reason: ' + status);
-        }
-    });
-}
-
-//gets the data from subscribed businesses
-function handlePromos (objects) {
-    var promo = new Array (objects.length);
-    var info = new Array (objects.length);
-    for (var i = 0; i < objects.length; i++) {
-        geoListener(promo, info, objects, i);
-
-    }
 }
 
 function geoListener(promo, info, objects, i){
